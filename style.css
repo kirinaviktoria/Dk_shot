@@ -301,11 +301,11 @@ header {
   background-repeat: no-repeat;    
   background-size: cover;
   background-position: 30% top;
-  top: -80px;
+  top: -100px;
   /* background-color: #333333; */
   position: relative;
   z-index: 1;
-  margin-bottom: -80px;
+  margin-bottom: -100px;
 }
 
 .hero:after{
@@ -516,6 +516,7 @@ header {
 /* to phone */
 @media screen and (max-width: 668px) {
   header {
+    padding: 20px 10px;
     flex-direction: column;
     justify-content: center;
     background-color: transparent;
@@ -535,8 +536,8 @@ header {
   }
 
   header.open {
-    padding: 10px;
-    height: 100vh;
+    height: 100%;
+    /* justify-content: space-between; */
     /* border: 1px solid #fff; */
   }
 
@@ -548,6 +549,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-height: 90vh;
     height: 100%;
     box-sizing: border-box;
     padding-top: 0;
@@ -559,7 +563,7 @@ header {
     /* border: 1px solid #fff; */
   }
 
-  .header__block-logo{
+   .header__block-logo{
     max-width: 100%;
     max-height: 100%;
     margin: 0 auto;
@@ -577,10 +581,11 @@ header {
     justify-content: center;
     font-size: 24px;
     font-weight: 100;
-    gap: 20px;
+    gap: 10px;
   }
 
   .header__buttons {
+    padding-top: 30px;
     flex-direction: column;
     justify-content: center;
     gap: 15px;
@@ -650,20 +655,16 @@ header {
 
 
   /* Стилизуем общий хедер для правильного отображения бургера */
-  header {
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-  }
+
 
   .header__block {
 
   }
 
   .header__block-logo {
-    width: 100%;
+    /* width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center; */
   }
 }
 
