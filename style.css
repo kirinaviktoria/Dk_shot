@@ -550,7 +550,8 @@ header {
     justify-content: space-between;
     height: 100%;
     box-sizing: border-box;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 30px;
     opacity: 1;
     animation: show .5s 1;
     transition: .5s;
@@ -631,6 +632,10 @@ header {
   }
   .arrow:after {
       animation: arrow 3s linear infinite -1.5s;
+  }
+
+  .hero__block {
+    padding-bottom: 170px;
   }
 }
 
