@@ -536,7 +536,7 @@ header {
   }
 
   header.open {
-    height: 100%;
+    height: 85vh;
     /* justify-content: space-between; */
     /* border: 1px solid #fff; */
   }
@@ -548,7 +548,7 @@ header {
   .header__block.open {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 30px;
     max-height: 90vh;
@@ -640,7 +640,7 @@ header {
   }
 
   .hero__block {
-    padding-bottom: 170px;
+    padding-bottom: 150px;
   }
 }
 
