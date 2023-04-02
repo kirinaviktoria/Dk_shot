@@ -551,7 +551,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
-    max-height: 90vh;
+    max-height: 80vh;
     height: 100%;
     box-sizing: border-box;
     padding-top: 0;
