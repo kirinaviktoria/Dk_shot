@@ -3,14 +3,22 @@ const headerBlock = document.querySelector('.header__block')
 const header = document.querySelector('.header')
 const hero = document.querySelector('.hero')
 const formats = document.querySelector('.formats__block')
+const containers = document.querySelectorAll('.container')
+
 
 // if (document.documentElement.clientWidth < 480) {
 //   headerBlock.classList.add('hide')
 // };
 
-burgerBtn.addEventListener('click', () => {
+burgerBtn.addEventListener('click', () => hideAll())
+
+
+const hideAll = () => {
   headerBlock.classList.toggle('open');
   header.classList.toggle('open');
-  hero.classList.toggle('hide');
-  formats.classList.toggle('hide');
-})
+
+  containers.forEach((item) => {
+    item.classList.toggle('hide');
+  })
+  
+}
