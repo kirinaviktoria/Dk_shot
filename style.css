@@ -561,6 +561,7 @@ header {
   padding: 0;
 }
 
+/* Динамические размеры */
 .mySwiper {
   width: 333px;
   height: 500px;
