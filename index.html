@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="removedefault.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./swiper/swiper-bundle.css">
   <title>DK shot</title>
 </head>
 
@@ -219,9 +220,10 @@
         <section class="block_title">
           <h1>Price</h1>
         </section>
-
+    
         <!-- Внешний контейнер для всех блоков прайса -->
-        <section class="block_cards">
+        <section class="block_cards price">
+    
           <!-- контейнер для 1 блока прайса -->
           <section class="price-block">
             <!-- price title => position: absolute -->
@@ -232,26 +234,187 @@
             <section class="price-content">
               <section class="content-column">
                 <p>1 - 9 арт</p>
-                <p>10 и более</p> 
+                <p>10 и более</p>
               </section>
-
+    
               <section class="content-column">
                 <p>1 800 <span>руб/арт</span></p>
                 <p>1 700 <span>руб/арт</span></p>
               </section>
             </section>
           </section>
+    
+          <!-- контейнер для 1 блока прайса -->
+          <section class="price-block">
+            <section class="price-title">
+              ИМИДЖЕВАЯ
+            </section>
+            <!-- внутренний контейнер в карточке прайса -->
+            <section class="price-content">
+              <section class="content-column">
+                <p>1 - 9 арт</p>
+                <p>10 и более</p>
+              </section>
+    
+              <section class="content-column">
+                <p>2 150 <span>руб/арт</span></p>
+                <p>2 050 <span>руб/арт</span></p>
+              </section>
+            </section>
+          </section>
+    
+          <!-- контейнер для 1 блока прайса -->
+          <section class="price-block">
+            <section class="price-title">
+              STREETSTYLE
+            </section>
+            <!-- внутренний контейнер в карточке прайса -->
+            <section class="price-content">
+              <section class="content-column">
+                <p>2 150 руб/арт</p>
+              </section>
+            </section>
+          </section>
+    
+          <!-- контейнер для 1 блока прайса -->
+          <section class="price-block">
+            <section class="price-title">
+              ИНДИВИДУАЛЬНАЯ ПОД КЛЮЧ
+            </section>
+            <!-- внутренний контейнер в карточке прайса -->
+            <section class="price-content">
+              <section class="content-column">
+                <p>Рассчитывается по запросу</p>
+              </section>
+            </section>
+          </section>
+    
+          <!-- контейнер для 1 блока прайса -->
+          <section class="price-block">
+            <section class="price-title">
+              ВИДЕО
+            </section>
+            <!-- внутренний контейнер в карточке прайса -->
+            <section class="price-content">
+              <section class="content-column">
+                <p>Видеопроходка</p>
+                <p>Reels</p>
+              </section>
+    
+              <section class="content-column">
+                <p>350</p>
+                <p>от 1 700</p>
+              </section>
+            </section>
+          </section>
+    
+          <!-- контейнер для 1 блока прайса -->
+          <section class="price-block">
+            <section class="price-title">
+              ПРЕДМЕТНАЯ
+            </section>
+            <!-- внутренний контейнер в карточке прайса -->
+            <section class="price-content">
+              <section class="content-column">
+                <p>На белом фоне</p>
+                <p>В интерьере</p>
+                <p>С моделью</p>
+              </section>
+    
+              <section class="content-column">
+                <p>950 <span>руб/арт</span></p>
+                <p>1 250 <span>руб/арт</span></p>
+                <p>2 150 <span>руб/арт</span></p>
+              </section>
+            </section>
+          </section>
+    
+          <!-- контейнер для 1 блока прайса -->
+          <section class="price-block">
+            <section class="price-title">
+              Дополнительные услуги
+            </section>
+            <!-- внутренний контейнер в карточке прайса -->
+            <section class="price-content">
+              <section class="content-column">
+                <p>Стилизация<br />образа</p>
+              </section>
+    
+              <section class="content-column">
+                <p>450 руб</p>
+              </section>
+            </section>
+          </section>
+    
         </section>
       </section>
     </div>
-    
-
     <!-- End price block -->
 
+    <!-- Start models block -->
+    <div class="container">
+      <section class="inner__container dark">
+        <section class="block_title">
+          <h1>Модели</h1>
+        </section>
+        <!-- Контейнер для всех карточек -->
+        <section class="block_cards">
+          <!-- Блок для 1 модели (карточка+инфо) -->
+          <section class="model_block">
+            <!-- Карточка модели -->
+            <section class="card model">
+              <!-- Slider main container -->
+              <div class="swiper mySwiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="./src/img/models/Nika-main.JPG" alt="model">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./src/img/models/Nika.JPG" alt="model">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./src/img/models/Nika1.JPG" alt="model">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./src/img/models/Nika2.JPEG" alt="model">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./src/img/models/Nika3.JPG" alt="model">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./src/img/models/Nika4.JPG" alt="model">
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev prev"></div>
+                <div class="swiper-button-next next"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+              </div>
+
+            </section>
+
+            <!-- Инфо модели -->
+            <section class="model_info">
+
+
+            </section>
+
+          </section>
+
+        </section>
+      </section>
+    </div>
+    <!-- End models block -->
 
   </main>
+  <script src="./swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
