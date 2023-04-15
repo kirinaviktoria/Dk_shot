@@ -689,7 +689,7 @@ header {
 }
 
 .faq-answer {
-  
+  align-self: flex-start;
 }
 
 

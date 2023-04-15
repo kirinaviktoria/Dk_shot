@@ -5,12 +5,6 @@ const hero = document.querySelector('.hero')
 const formats = document.querySelector('.formats__block')
 const containers = document.querySelectorAll('.container')
 
-const faqElem = document.querySelectorAll('.faq-elem')
-const answer = document.querySelectorAll('.faq-answer')
-const plus = document.querySelectorAll('.plus') 
-const minus = document.querySelectorAll('.minus') 
-
-
 // if (document.documentElement.clientWidth < 480) {
 //   headerBlock.classList.add('hide')
 // };
@@ -26,12 +20,16 @@ const hideAll = () => {
   })
 }
 
-// Продумать слушатель на каждый элемент
-faqElem.addEventListener('click', () => {
-  answer.classList.toggle('hide');
-  plus.classList.toggle('hide');
-  minus.classList.toggle('hide');
-})
+// const faq = document.querySelector('#faq-elem');
+//   const answer = document.querySelector('.faq-answer');
+//   const plus = document.querySelector('.plus');
+//   const minus = document.querySelector('.minus');
+// // Продумать слушатель на каждый элемент
+// faq.addEventListener('click', () => {
+//   answer.classList.toggle('hide');
+//   plus.classList.toggle('hide');
+//   minus.classList.toggle('hide');
+// })
 
 // faqElem.forEach((item) => {
 //   item.addEventListener('click', () => {
@@ -40,6 +38,21 @@ faqElem.addEventListener('click', () => {
 //     minus.classList.toggle('hide');
 //   })
 // })
+
+document.querySelectorAll('#faq-elem').forEach(function (faqWrapper) {
+  const faq = faqWrapper.querySelector('.faq-title');
+  const answer = faqWrapper.querySelector('.faq-answer');
+  const plus = faqWrapper.querySelector('.plus');
+  const minus = faqWrapper.querySelector('.minus');
+
+  faq.addEventListener('click', () => {
+    answer.classList.toggle('hide');
+    plus.classList.toggle('hide');
+    minus.classList.toggle('hide');
+  });
+});
+
+document.addEventListener('click', e => console.log(e.target));
 
 const swiper = new Swiper('.mySwiper', {
   // Optional parameters
