@@ -686,10 +686,55 @@ header {
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  font-size: 20px;
 }
 
 .faq-answer {
   align-self: flex-start;
+  font-size: 18px;
+}
+
+.footer {
+
+}
+.inner__container {
+
+}
+
+.block_title h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23px;
+
+}
+
+.elem-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.footer-elem a {
+  font-weight: 400;
+  color: var(--light-pink);
+  cursor: pointer;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 
@@ -706,16 +751,17 @@ header {
   .burger_btn {
     display: block;
     align-self: flex-end;
-    z-index: 5;
   }
 
   .header__block{
     display: none;
     opacity: 0;
+    height: 100%;
   }
 
   header.open {
-    height: 95vh;
+    /* Размер для мобильного экрана, подстраивающий высоту */
+    height: 100svh;
     justify-content: flex-start;
     /* border: 1px solid #fff; */
   }
@@ -728,18 +774,15 @@ header {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
     gap: 30px;
-    max-height: 85vh;
     height: 100%;
     box-sizing: border-box;
-    padding-top: 0;
-    padding-bottom: 30px;
+    /* padding-top: 30px; */
+    /* padding-bottom: 30px; */
     opacity: 1;
     animation: show .5s 1;
     transition: .5s;
-    /* top: 0; */
     /* border: 1px solid #fff; */
   }
 
@@ -771,7 +814,8 @@ header {
   }
 
   .header__buttons {
-    padding-top: 30px;
+    /* padding-top: 30px; */
+    margin-top: auto;
     flex-direction: column;
     justify-content: center;
     gap: 15px;
@@ -897,8 +941,6 @@ header {
     }
 
 }
-
-
 
 /* Мобильная версия большая + планшет*/
 @media screen and (min-width: 480px) and (max-width: 680px) {

@@ -20,25 +20,6 @@ const hideAll = () => {
   })
 }
 
-// const faq = document.querySelector('#faq-elem');
-//   const answer = document.querySelector('.faq-answer');
-//   const plus = document.querySelector('.plus');
-//   const minus = document.querySelector('.minus');
-// // Продумать слушатель на каждый элемент
-// faq.addEventListener('click', () => {
-//   answer.classList.toggle('hide');
-//   plus.classList.toggle('hide');
-//   minus.classList.toggle('hide');
-// })
-
-// faqElem.forEach((item) => {
-//   item.addEventListener('click', () => {
-//     answer.classList.toggle('hide');
-//     plus.classList.toggle('hide');
-//     minus.classList.toggle('hide');
-//   })
-// })
-
 document.querySelectorAll('#faq-elem').forEach(function (faqWrapper) {
   const faq = faqWrapper.querySelector('.faq-title');
   const answer = faqWrapper.querySelector('.faq-answer');
@@ -52,7 +33,7 @@ document.querySelectorAll('#faq-elem').forEach(function (faqWrapper) {
   });
 });
 
-document.addEventListener('click', e => console.log(e.target));
+// document.addEventListener('click', e => console.log(e.target));
 
 const swiper = new Swiper('.mySwiper', {
   // Optional parameters
@@ -69,11 +50,6 @@ const swiper = new Swiper('.mySwiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
 
   mousewhell: true,
 });
