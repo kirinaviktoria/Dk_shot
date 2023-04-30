@@ -8,24 +8,24 @@
   <link rel="stylesheet" href="removedefault.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="./swiper/swiper-bundle.css">
-  <title>DK shot</title>
+  <title>DK shot: сборные съемки Москва</title>
 </head>
 
 <body>
   <main>
     <!-- Start Big block header -->
-    <header class="header">
-       <!-- Start burger button block -->
-        <button class="burger_btn">
-          <span></span><span></span><span></span>
-        </button>
+    <header class="header" id="top">
+      <!-- Start burger button block -->
+      <button class="burger_btn">
+        <span></span><span></span><span></span>
+      </button>
       <!-- End burger button block -->
 
       <!-- Start Inner block header -->
       <div class="header__block">
         <!-- Start logo block in header -->
         <section class="header__block-logo">
-          <a href="#">
+          <a href="#top">
             <img src="src/img/logo_white.svg" alt="logo" class="img-logo">
           </a>
         </section>
@@ -35,22 +35,22 @@
         <nav class="header__nav">
           <ul class="header__links">
             <li class="nav">
-              <a href="">форматы съемок</a>
+              <a href="#formats" id="nav-link">форматы съемок</a>
             </li>
             <li class="nav">
-              <a href="#">прайс</a>
+              <a href="#price" id="nav-link">прайс</a>
             </li>
             <li class="nav">
-              <a href="#">модели</a>
+              <a href="#models" id="nav-link">модели</a>
             </li>
             <li class="nav">
-              <a href="#">о нас</a>
+              <a href="#about" id="nav-link">о нас</a>
             </li>
             <li class="nav">
-              <a href="#">контакты</a>
+              <a href="#contacts" id="nav-link">контакты</a>
             </li>
             <li class="nav">
-              <a href="#">info</a>
+              <a href="#faq" id="nav-link">FAQ</a>
             </li>
           </ul>
         </nav>
@@ -60,13 +60,13 @@
         <div class="header__buttons">
           <!-- Start socials header block -->
           <div class="header__socials">
-            <a href="#">
+            <a href="https://t.me/kate_kazanka" target="_blank">
               <img src="src/img/telegram.svg" alt="tg">
             </a>
-            <a href="#">
+            <a href="#" target="_blank">
               <img src="src/img/instagram.svg" alt="ig">
             </a>
-            <a href="#">
+            <a href="#" target="_blank">
               <img src="src/img/whatsapp.svg" alt="wa">
             </a>
           </div>
@@ -74,16 +74,16 @@
 
           <!-- Start button header block -->
           <div class="button__block">
-            <button class="button-frame">
+            <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame">
               Записаться на съемку
-            </button>
+            </a>
           </div>
           <!-- End button header block -->
         </div>
         <!-- End header buttons block -->
 
       </div>
-      <!-- End Inner block header --> 
+      <!-- End Inner block header -->
     </header>
     <!-- End Big block header -->
 
@@ -102,9 +102,9 @@
             </section>
 
             <section class="hero-buttons">
-              <button class="button-full bigtext">
+              <a href="https://t.me/kate_kazanka" target="_blank" class="button-full bigtext">
                 Оставить заявку
-              </button>
+              </a>
               <!-- Arrow down -->
               <div class="arrow"></div>
             </section>
@@ -112,118 +112,119 @@
         </section>
       </section>
     </div>
+    <!-- End hero block -->
 
     <!-- Start formats block -->
-      <div class="container">
-        <section class="inner__container dark">
-          <section class="block_title">
-            <h1>Форматы съемок</h1>
+    <div class="container" id="formats">
+      <section class="inner__container dark">
+        <section class="block_title">
+          <h1>Форматы съемок</h1>
+        </section>
+
+        <section class="block_cards formats">
+          <section class="card catalog format">
+            <section class="card__content">
+              <section class="card_text">
+                <h3 class="card_title">
+                  Каталог
+                </h3>
+                <span class="card_info">
+                  Базовая съемка, передающая все характеристики товара
+                </span>
+              </section>
+              <button class="button-full">Подробнее</button>
+            </section>
           </section>
-    
-          <section class="block_cards formats">
-            <section class="card catalog format">
-              <section class="card__content">
-                <section class="card_text">
-                  <h3 class="card_title">
-                    Каталог
-                  </h3>
-                  <span class="card_info">
-                    Базовая съемка, передающая все характеристики товара
-                  </span>
-                </section>
-                <button class="button-full">Подробнее</button>
+
+
+          <section class="card imidge format">
+            <section class="card__content">
+              <section class="card_text">
+                <h3 class="card_title">
+                  Имиджевая съемка
+                </h3>
+                <span class="card_info">
+                  Концептуальная съемка, передающая основной образ и характер коллекции
+                </span>
               </section>
+              <button class="button-full">Подробнее</button>
             </section>
-    
-    
-            <section class="card imidge format">
-              <section class="card__content">
-                <section class="card_text">
-                  <h3 class="card_title">
-                    Имиджевая съемка
-                  </h3>
-                  <span class="card_info">
-                    Концептуальная съемка, передающая основной образ и характер коллекции
-                  </span>
-                </section>
-                <button class="button-full">Подробнее</button>
+          </section>
+
+
+          <section class="card street format">
+            <section class="card__content">
+              <section class="card_text">
+                <h3 class="card_title">
+                  Sreet style
+                </h3>
+                <span class="card_info">
+                  Съемка, проведенная за пределами фотостудии
+                </span>
               </section>
+              <button class="button-full">Подробнее</button>
             </section>
-    
-    
-            <section class="card street format">
-              <section class="card__content">
-                <section class="card_text">
-                  <h3 class="card_title">
-                    Sreet style
-                  </h3>
-                  <span class="card_info">
-                    Съемка, проведенная за пределами фотостудии
-                  </span>
-                </section>
-                <button class="button-full">Подробнее</button>
+          </section>
+
+
+          <section class="card individual format">
+            <section class="card__content">
+              <section class="card_text">
+                <h3 class="card_title">
+                  Индивидуальная
+                </h3>
+                <span class="card_info">
+                  Съемка, организованная специально под Вас
+                </span>
               </section>
+              <button class="button-full">Подробнее</button>
             </section>
-    
-    
-            <section class="card individual format">
-              <section class="card__content">
-                <section class="card_text">
-                  <h3 class="card_title">
-                    Индивидуальная
-                  </h3>
-                  <span class="card_info">
-                    Съемка, организованная специально под Вас
-                  </span>
-                </section>
-                <button class="button-full">Подробнее</button>
+          </section>
+
+
+          <section class="card video format">
+            <section class="card__content">
+              <section class="card_text">
+                <h3 class="card_title">
+                  Видеопроходка
+                </h3>
+                <span class="card_info">
+                  Короткое видео для маркетплейсов
+                </span>
               </section>
+              <button class="button-full">Подробнее</button>
             </section>
-    
-    
-            <section class="card video format">
-              <section class="card__content">
-                <section class="card_text">
-                  <h3 class="card_title">
-                    Видеопроходка
-                  </h3>
-                  <span class="card_info">
-                    Короткое видео для маркетплейсов
-                  </span>
-                </section>
-                <button class="button-full">Подробнее</button>
+          </section>
+
+
+          <section class="card reels format">
+            <section class="card__content">
+              <section class="card_text">
+                <h3 class="card_title">
+                  Reels
+                </h3>
+                <span class="card_info">
+                  Концептуальное видео в формате Инстаграм
+                </span>
               </section>
-            </section>
-    
-    
-            <section class="card reels format">
-              <section class="card__content">
-                <section class="card_text">
-                  <h3 class="card_title">
-                    Reels
-                  </h3>
-                  <span class="card_info">
-                    Концептуальное видео в формате Инстаграм
-                  </span>
-                </section>
-                <button class="button-full">Подробнее</button>
-              </section>
+              <button class="button-full">Подробнее</button>
             </section>
           </section>
         </section>
-      </div>
+      </section>
+    </div>
     <!-- End formats block -->
 
     <!-- Start price block -->
-    <div class="container light">
+    <div class="container light" id="price">
       <section class="inner__container">
         <section class="block_title">
           <h1>Price</h1>
         </section>
-    
+
         <!-- Внешний контейнер для всех блоков прайса -->
         <section class="block_cards price">
-    
+
           <!-- контейнер для 1 блока прайса -->
           <section class="price-block">
             <!-- price title => position: absolute -->
@@ -236,14 +237,14 @@
                 <p>1 - 9 арт</p>
                 <p>10 и более</p>
               </section>
-    
+
               <section class="content-column">
                 <p>1 800 <span>руб/арт</span></p>
                 <p>1 700 <span>руб/арт</span></p>
               </section>
             </section>
           </section>
-    
+
           <!-- контейнер для 1 блока прайса -->
           <section class="price-block">
             <section class="price-title">
@@ -255,14 +256,14 @@
                 <p>1 - 9 арт</p>
                 <p>10 и более</p>
               </section>
-    
+
               <section class="content-column">
                 <p>2 150 <span>руб/арт</span></p>
                 <p>2 050 <span>руб/арт</span></p>
               </section>
             </section>
           </section>
-    
+
           <!-- контейнер для 1 блока прайса -->
           <section class="price-block">
             <section class="price-title">
@@ -275,7 +276,7 @@
               </section>
             </section>
           </section>
-    
+
           <!-- контейнер для 1 блока прайса -->
           <section class="price-block">
             <section class="price-title">
@@ -287,14 +288,14 @@
                 <p>Видеопроходка</p>
                 <p>Reels</p>
               </section>
-    
+
               <section class="content-column">
                 <p>350</p>
                 <p>от 1 700</p>
               </section>
             </section>
           </section>
-    
+
           <!-- контейнер для 1 блока прайса -->
           <section class="price-block">
             <section class="price-title">
@@ -307,7 +308,7 @@
                 <p>В интерьере</p>
                 <p>С моделью</p>
               </section>
-    
+
               <section class="content-column">
                 <p>950 <span>руб/арт</span></p>
                 <p>1 250 <span>руб/арт</span></p>
@@ -315,7 +316,7 @@
               </section>
             </section>
           </section>
-    
+
           <!-- контейнер для 1 блока прайса -->
           <section class="price-block">
             <section class="price-title">
@@ -326,7 +327,7 @@
               <section class="content-column">
                 <p>Стилизация<br />образа</p>
               </section>
-    
+
               <section class="content-column">
                 <p>450 руб</p>
               </section>
@@ -345,14 +346,14 @@
               </section>
             </section>
           </section>
-    
+
         </section>
       </section>
     </div>
     <!-- End price block -->
 
     <!-- Start models block -->
-    <div class="container">
+    <div class="container" id="models">
       <section class="inner__container dark">
         <section class="block_title">
           <h1>Модели</h1>
@@ -591,15 +592,16 @@
     <!-- End models block -->
 
     <!-- Start About us block-->
-    <section class="container light">
+    <section class="container light" id="about">
       <section class="inner__container">
         <section class="block_title">
           <h1>О нас</h1>
           <p class="about-description">
-            <span class="bold">DK SHOT</span> — профессиональная команда по созданию контента для брендов и маркетплейсов.
+            <span class="bold">DK SHOT</span> — профессиональная команда по созданию контента для брендов и
+            маркетплейсов.
           </p>
         </section>
-    
+
         <section class="about__content">
           <section class="block_cards about">
             <section class="polaroid">
@@ -607,29 +609,30 @@
               <p>Даша – фотограф</p>
               <a href="#" class="button-full">Instagram</a>
             </section>
-    
+
             <section class="polaroid">
               <img src="./src/img/team/kate.PNG" alt="photographer">
               <p>Катя - продюсер</p>
               <a href="#" class="button-full">Instagram</a>
             </section>
-    
+
             <section class="card text">
-              <p>Более года успешно проводим еженедельные сборные съемки, благодаря которым наши клиенты выходят в топ на маркетплейсах.</p>
+              <p>Более года успешно проводим еженедельные сборные съемки, благодаря которым наши клиенты выходят в топ
+                на маркетплейсах.</p>
             </section>
 
             <section class="card text">
               <p>С душой и профессионализмом подходим к каждому клиенту, реализовывая все креативные задумки.</p>
             </section>
-    
+
           </section>
-        </section>   
+        </section>
       </section>
     </section>
     <!-- End About us block -->
 
     <!-- Start FAQ block -->
-    <section class="container dark faq">
+    <section class="container dark faq" id="faq">
       <section class="inner__container">
         <section class="block_title">
           <h1>FAQ</h1>
@@ -642,12 +645,18 @@
               <section class="faq-title">
                 <p>Что я получу после съемки?</p>
                 <div class="faq-button">
-                  <svg class="plus" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 0C7.74864 0 7.9871 0.0987722 8.16291 0.274588C8.33873 0.450403 8.4375 0.68886 8.4375 0.9375V6.5625H14.0625C14.3111 6.5625 14.5496 6.66127 14.7254 6.83709C14.9012 7.0129 15 7.25136 15 7.5C15 7.74864 14.9012 7.9871 14.7254 8.16291C14.5496 8.33873 14.3111 8.4375 14.0625 8.4375H8.4375V14.0625C8.4375 14.3111 8.33873 14.5496 8.16291 14.7254C7.9871 14.9012 7.74864 15 7.5 15C7.25136 15 7.0129 14.9012 6.83709 14.7254C6.66127 14.5496 6.5625 14.3111 6.5625 14.0625V8.4375H0.9375C0.68886 8.4375 0.450403 8.33873 0.274588 8.16291C0.0987722 7.9871 0 7.74864 0 7.5C0 7.25136 0.0987722 7.0129 0.274588 6.83709C0.450403 6.66127 0.68886 6.5625 0.9375 6.5625H6.5625V0.9375C6.5625 0.68886 6.66127 0.450403 6.83709 0.274588C7.0129 0.0987722 7.25136 0 7.5 0Z" fill="#E5E5E5"/>
-                  </svg> 
-                  <svg class="minus hide" width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1.5C0 1.16848 0.0987722 0.850537 0.274588 0.616117C0.450403 0.381696 0.68886 0.25 0.9375 0.25H14.0625C14.3111 0.25 14.5496 0.381696 14.7254 0.616117C14.9012 0.850537 15 1.16848 15 1.5C15 1.83152 14.9012 2.14946 14.7254 2.38388C14.5496 2.6183 14.3111 2.75 14.0625 2.75H0.9375C0.68886 2.75 0.450403 2.6183 0.274588 2.38388C0.0987722 2.14946 0 1.83152 0 1.5Z" fill="#E5E5E5"/>
-                  </svg> 
+                  <svg class="plus" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.5 0C7.74864 0 7.9871 0.0987722 8.16291 0.274588C8.33873 0.450403 8.4375 0.68886 8.4375 0.9375V6.5625H14.0625C14.3111 6.5625 14.5496 6.66127 14.7254 6.83709C14.9012 7.0129 15 7.25136 15 7.5C15 7.74864 14.9012 7.9871 14.7254 8.16291C14.5496 8.33873 14.3111 8.4375 14.0625 8.4375H8.4375V14.0625C8.4375 14.3111 8.33873 14.5496 8.16291 14.7254C7.9871 14.9012 7.74864 15 7.5 15C7.25136 15 7.0129 14.9012 6.83709 14.7254C6.66127 14.5496 6.5625 14.3111 6.5625 14.0625V8.4375H0.9375C0.68886 8.4375 0.450403 8.33873 0.274588 8.16291C0.0987722 7.9871 0 7.74864 0 7.5C0 7.25136 0.0987722 7.0129 0.274588 6.83709C0.450403 6.66127 0.68886 6.5625 0.9375 6.5625H6.5625V0.9375C6.5625 0.68886 6.66127 0.450403 6.83709 0.274588C7.0129 0.0987722 7.25136 0 7.5 0Z"
+                      fill="#E5E5E5" />
+                  </svg>
+                  <svg class="minus hide" width="15" height="3" viewBox="0 0 15 3" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 1.5C0 1.16848 0.0987722 0.850537 0.274588 0.616117C0.450403 0.381696 0.68886 0.25 0.9375 0.25H14.0625C14.3111 0.25 14.5496 0.381696 14.7254 0.616117C14.9012 0.850537 15 1.16848 15 1.5C15 1.83152 14.9012 2.14946 14.7254 2.38388C14.5496 2.6183 14.3111 2.75 14.0625 2.75H0.9375C0.68886 2.75 0.450403 2.6183 0.274588 2.38388C0.0987722 2.14946 0 1.83152 0 1.5Z"
+                      fill="#E5E5E5" />
+                  </svg>
                 </div>
               </section>
 
@@ -655,26 +664,32 @@
                 <p>На каждый артикул:</p>
                 <ul>
                   <li>– все исходники (25-30 кадров)</li>
-                  <li>– 6 кадров в ретуши</li>
+                  <li>– 4 кадра в ретуши</li>
                   <li>– видеопроходку</li>
                   <li>– reels</li>
-                  <li>– backstage</li><br/>
+                  <li>– backstage</li><br />
                   <li>*Фотографии на ретушь Вы отбираете самостоятельно</li>
                 </ul>
               </section>
             </section>
 
-             <!-- Карточка 1 вопроса -->
-             <section class="card faq-elem" id="faq-elem">
+            <!-- Карточка 1 вопроса -->
+            <section class="card faq-elem" id="faq-elem">
               <section class="faq-title">
                 <p>Когда я получу фотографии?</p>
                 <div class="faq-button">
-                  <svg class="plus" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 0C7.74864 0 7.9871 0.0987722 8.16291 0.274588C8.33873 0.450403 8.4375 0.68886 8.4375 0.9375V6.5625H14.0625C14.3111 6.5625 14.5496 6.66127 14.7254 6.83709C14.9012 7.0129 15 7.25136 15 7.5C15 7.74864 14.9012 7.9871 14.7254 8.16291C14.5496 8.33873 14.3111 8.4375 14.0625 8.4375H8.4375V14.0625C8.4375 14.3111 8.33873 14.5496 8.16291 14.7254C7.9871 14.9012 7.74864 15 7.5 15C7.25136 15 7.0129 14.9012 6.83709 14.7254C6.66127 14.5496 6.5625 14.3111 6.5625 14.0625V8.4375H0.9375C0.68886 8.4375 0.450403 8.33873 0.274588 8.16291C0.0987722 7.9871 0 7.74864 0 7.5C0 7.25136 0.0987722 7.0129 0.274588 6.83709C0.450403 6.66127 0.68886 6.5625 0.9375 6.5625H6.5625V0.9375C6.5625 0.68886 6.66127 0.450403 6.83709 0.274588C7.0129 0.0987722 7.25136 0 7.5 0Z" fill="#E5E5E5"/>
-                  </svg> 
-                  <svg class="minus hide" width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 1.5C0 1.16848 0.0987722 0.850537 0.274588 0.616117C0.450403 0.381696 0.68886 0.25 0.9375 0.25H14.0625C14.3111 0.25 14.5496 0.381696 14.7254 0.616117C14.9012 0.850537 15 1.16848 15 1.5C15 1.83152 14.9012 2.14946 14.7254 2.38388C14.5496 2.6183 14.3111 2.75 14.0625 2.75H0.9375C0.68886 2.75 0.450403 2.6183 0.274588 2.38388C0.0987722 2.14946 0 1.83152 0 1.5Z" fill="#E5E5E5"/>
-                  </svg> 
+                  <svg class="plus" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.5 0C7.74864 0 7.9871 0.0987722 8.16291 0.274588C8.33873 0.450403 8.4375 0.68886 8.4375 0.9375V6.5625H14.0625C14.3111 6.5625 14.5496 6.66127 14.7254 6.83709C14.9012 7.0129 15 7.25136 15 7.5C15 7.74864 14.9012 7.9871 14.7254 8.16291C14.5496 8.33873 14.3111 8.4375 14.0625 8.4375H8.4375V14.0625C8.4375 14.3111 8.33873 14.5496 8.16291 14.7254C7.9871 14.9012 7.74864 15 7.5 15C7.25136 15 7.0129 14.9012 6.83709 14.7254C6.66127 14.5496 6.5625 14.3111 6.5625 14.0625V8.4375H0.9375C0.68886 8.4375 0.450403 8.33873 0.274588 8.16291C0.0987722 7.9871 0 7.74864 0 7.5C0 7.25136 0.0987722 7.0129 0.274588 6.83709C0.450403 6.66127 0.68886 6.5625 0.9375 6.5625H6.5625V0.9375C6.5625 0.68886 6.66127 0.450403 6.83709 0.274588C7.0129 0.0987722 7.25136 0 7.5 0Z"
+                      fill="#E5E5E5" />
+                  </svg>
+                  <svg class="minus hide" width="15" height="3" viewBox="0 0 15 3" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 1.5C0 1.16848 0.0987722 0.850537 0.274588 0.616117C0.450403 0.381696 0.68886 0.25 0.9375 0.25H14.0625C14.3111 0.25 14.5496 0.381696 14.7254 0.616117C14.9012 0.850537 15 1.16848 15 1.5C15 1.83152 14.9012 2.14946 14.7254 2.38388C14.5496 2.6183 14.3111 2.75 14.0625 2.75H0.9375C0.68886 2.75 0.450403 2.6183 0.274588 2.38388C0.0987722 2.14946 0 1.83152 0 1.5Z"
+                      fill="#E5E5E5" />
+                  </svg>
                 </div>
               </section>
 
@@ -691,19 +706,21 @@
               <section class="faq-title">
                 <p>Почему именно мы?</p>
                 <div class="faq-button">
-                  <svg class="plus" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="plus" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M7.5 0C7.74864 0 7.9871 0.0987722 8.16291 0.274588C8.33873 0.450403 8.4375 0.68886 8.4375 0.9375V6.5625H14.0625C14.3111 6.5625 14.5496 6.66127 14.7254 6.83709C14.9012 7.0129 15 7.25136 15 7.5C15 7.74864 14.9012 7.9871 14.7254 8.16291C14.5496 8.33873 14.3111 8.4375 14.0625 8.4375H8.4375V14.0625C8.4375 14.3111 8.33873 14.5496 8.16291 14.7254C7.9871 14.9012 7.74864 15 7.5 15C7.25136 15 7.0129 14.9012 6.83709 14.7254C6.66127 14.5496 6.5625 14.3111 6.5625 14.0625V8.4375H0.9375C0.68886 8.4375 0.450403 8.33873 0.274588 8.16291C0.0987722 7.9871 0 7.74864 0 7.5C0 7.25136 0.0987722 7.0129 0.274588 6.83709C0.450403 6.66127 0.68886 6.5625 0.9375 6.5625H6.5625V0.9375C6.5625 0.68886 6.66127 0.450403 6.83709 0.274588C7.0129 0.0987722 7.25136 0 7.5 0Z"
                       fill="#E5E5E5" />
                   </svg>
-                  <svg class="minus hide" width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="minus hide" width="15" height="3" viewBox="0 0 15 3" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M0 1.5C0 1.16848 0.0987722 0.850537 0.274588 0.616117C0.450403 0.381696 0.68886 0.25 0.9375 0.25H14.0625C14.3111 0.25 14.5496 0.381696 14.7254 0.616117C14.9012 0.850537 15 1.16848 15 1.5C15 1.83152 14.9012 2.14946 14.7254 2.38388C14.5496 2.6183 14.3111 2.75 14.0625 2.75H0.9375C0.68886 2.75 0.450403 2.6183 0.274588 2.38388C0.0987722 2.14946 0 1.83152 0 1.5Z"
                       fill="#E5E5E5" />
                   </svg>
                 </div>
               </section>
-            
+
               <section class="faq-answer hide">
                 <ul>
                   <li>– работаем от 1го артикула</li>
@@ -715,58 +732,100 @@
             </section>
 
 
-            </section>
           </section>
         </section>
-
       </section>
+
+    </section>
     </section>
     <!-- End FAQ block -->
 
-    <!-- Start Footer -->
-    <section class="container dark footer">
+    <!-- Start contacts block -->
+    <section class="container light contacts" id="contacts">
       <section class="inner__container">
         <section class="block_title">
           <h3>Следите за нами в социальных сетях</h3>
         </section>
-    
-        <section class="footer__content">
-          <section class="footer-elem">
+
+        <section class="contacts__content">
+          <section class="contacts-elem">
             Оценивайте результаты наших съемок,
             следите за жизнью нашего продакшена и
             читайте полезные посты о фотоконтенте
-          </section>    
-    
-          <section class="footer-elem">
-            Свежая информация о предстоящих съмках - в 
+          </section>
+
+          <section class="contacts-elem">
+            Свежая информация о предстоящих съмках - в
             нашем <a href="#">Телеграм-канале</a>
           </section>
-    
-    
-          <section class="footer-elem elem-flex">
-            <a href="mailto:info@dkshot.ru">info@dkshot.ru</a>
+
+          <section class="contacts-elem elem-flex">
+            <!-- <a href="mailto:info@dkshot.ru">info@dkshot.ru</a> -->
             <a href="tel:+79031209433">+7 (903) 120 94 33</a>
           </section>
-    
-          <section class="footer-socials">
-            <img src="./src/img/telegram.svg" alt="tg">
-            <img src="./src/img/instagram.svg" alt="ig">
-            <img src="./src/img/whatsapp.svg" alt="wa">
+
+          <section class="contacts-socials">
+            <a href="https://t.me/kate_kazanka" target="_blank"><img src="./src/img/tg-dark.svg" alt="tg"></a>
+            <a href="#" target="_blank"><img src="./src/img/ig-dark.svg" alt="ig"></a>
+            <a href="#" target="_blank"><img src="./src/img/wa-dark.svg" alt="wa"></a>
           </section>
-    
+
         </section>
       </section>
+
     </section>
+
+    <!-- End contacts block -->
+
+    <!-- Start Footer -->
+    <footer class="container dark">
+      <div class="inner__container footer">
+
+        <!-- <div class="footer-first">
+          <div class="footer-left">
+            <a href="">Главная</a>
+            <a href="">Форматы</a>
+            <a href="">Прайс</a>
+          </div>
+          
+          <div class="footer-right">
+            <a href="">Модели</a>
+            <a href="">О нас</a>
+            <a href="">FAQ</a>
+          </div>
+        </div> -->
+
+        <div class="footer-last">
+          <a href="#top">Главная</a>
+          <a href="#formats">Форматы</a>
+          <a href="#price">Прайс</a>
+          <a href="#models">Модели</a>
+          <a href="#about">О нас</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contacts">Контактная информация</a>
+        </div>
+
+        <!-- <button class="button-full">
+          Записаться на съемку
+        </button> -->
+
+        <div class="copyright">
+          2022-2023 © Все права защищены. DK shot - сборные съемки Москва
+        </div>
+
+      </div>
+    </footer>
     <!-- End Footer -->
 
 
     <section>
       <div>
-        
+
       </div>
     </section>
   </main>
   <script src="./swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

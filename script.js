@@ -33,7 +33,23 @@ document.querySelectorAll('#faq-elem').forEach(function (faqWrapper) {
   });
 });
 
-// document.addEventListener('click', e => console.log(e.target));
+
+document.querySelectorAll('.nav').forEach(function (headerLinks) {
+  const nav = headerLinks.querySelector('#nav-link');
+  
+  // nav.addEventListener('click', () => {
+  //   headerBlock.classList.remove('open');
+  //   header.classList.remove('open');
+  // })
+
+  // containers.forEach((item) => {
+  //   item.classList.remove('hide');
+  // })
+
+  nav.addEventListener('click', () => hideAll())
+})
+
+document.addEventListener('click', e => console.log(e.target));
 
 const swiper = new Swiper('.mySwiper', {
   // Optional parameters

@@ -480,12 +480,12 @@ header {
 }
 /* сделать гиф для фона */
 .video {
-  /* background-image: url(./src/img/individual/main.JPG); */
+  background-image: url(./src/img/gif/walk1.gif);
   background-color: var(--light-pink);
 }
 /* сделать гиф для фона */
 .reels {
-  /* background-image: url(./src/img/individual/main.JPG); */
+  background-image: url(./src/img/gif/walk.gif);
   background-color: var(--light-pink);
 }
 
@@ -694,7 +694,7 @@ header {
   font-size: 18px;
 }
 
-.footer {
+.contacts {
 
 }
 .inner__container {
@@ -706,7 +706,7 @@ header {
   font-weight: 600;
 }
 
-.footer__content {
+.contacts__content {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -725,16 +725,81 @@ header {
   font-size: 20px;
 }
 
-.footer-elem a {
+.contacts-elem a {
   font-weight: 400;
-  color: var(--light-pink);
+  color: var(--pink);
   cursor: pointer;
 }
 
-.footer-socials {
+.contacts-socials {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.footer {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer a {
+  opacity: 0.8;
+  /* transition: all ease 0.3s; */
+}
+
+
+.footer a:hover {
+  /* opacity: 1; */
+
+}
+
+.footer a::after {
+  content: '';
+  border-right: 0.5px solid var(--light);
+  padding-left: 10px;
+}
+
+.footer a:last-child:after {
+  content: '';
+  border: none;
+}
+
+.footer-first {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-left {
+  align-items: flex-end;
+}
+
+.footer-last {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.copyright {
+  padding-top: 20px;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 14px;
 }
 
 
