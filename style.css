@@ -546,6 +546,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   overflow-y: auto;
   visibility: hidden;
   opacity: 0;
@@ -556,7 +557,7 @@ header {
 .popup__block {
   height: 100svh;
   background-color: var(--dark-gray) !important;
-  padding: 10px; /* Убрать для мобильной версии */
+  padding: 20px; /* Убрать для мобильной версии */
   font-size: 18px;
   text-align: justify;
   /* border-radius: 20px; */
@@ -565,11 +566,21 @@ header {
   -moz-box-shadow: 7px 7px 11px 0px rgba(51, 51, 51, 0.2);
   box-shadow: 7px 7px 11px 0px rgba(51, 51, 51, 0.2);
   gap: 0;
+  position: relative;
+
+  max-width: 100svw;
+  overflow-x: hidden;
 }
 
 .popup.visible {
   visibility: visible;
   opacity: 1;
+}
+
+.close_popup {
+  /* display: flex !important; */
+  /* justify-self: flex-start; */
+  height: 40px;
 }
 
 .close_popup span:nth-child(1){
@@ -596,6 +607,7 @@ header {
   /* add to mobile media */
   /* max-width: 345px !important; */
   width: 100%;
+  height: fit-content;
 }
 
 .scroll-hidden {
@@ -650,7 +662,6 @@ header {
 }
 
 .swiper-slide {
-  
   text-align: center;
   display: flex;
   justify-content: center;
@@ -891,6 +902,7 @@ header {
   .burger_btn {
     display: block;
     align-self: flex-end;
+
   }
 
   .header__block{
@@ -1015,6 +1027,19 @@ header {
   .hero__block {
     padding-bottom: 50px;
   }
+
+  .popup {
+    padding: 0;
+  }
+
+  .popup__block {
+    font-size: 16px;
+  }
+
+  .popup_content .block_title h1 {
+    font-size: 24px !important;
+  }
+
 }
 
 @media screen and (min-width: 669px) {

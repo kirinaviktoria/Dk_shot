@@ -4,9 +4,7 @@ const header = document.querySelector('.header');
 const hero = document.querySelector('.hero');
 const formats = document.querySelector('.formats__block');
 const containers = document.querySelectorAll('.container');
-const popup = document.querySelector('.popup');
-const popupInside = document.querySelector('.popup .popup__block');
-const closePopup = document.querySelector('.close_popup');
+
 const body = document.querySelector('.body');
 
 // if (document.documentElement.clientWidth < 480) {
@@ -43,14 +41,62 @@ document.querySelectorAll('.nav').forEach(function (headerLinks) {
   nav.addEventListener('click', () => hideAll());
 });
 
-document.querySelectorAll('.card__content').forEach(function(formats) {
+document.querySelectorAll('.format').forEach(function(formats) {
   const formatsBtn = formats.querySelector('.format-btn');
+  const popup = formats.querySelector('.popup');
+  const popupInside = formats.querySelector('.popup .popup__block');
+  const closePopup = formats.querySelector('.close_popup');
   // тут вставить получение конкретного попапа для каждого формата
 
   formatsBtn.addEventListener('click', () => {
     popup.classList.toggle('visible')
     body.classList.toggle('scroll-hidden');
   });
+
+  closePopup.addEventListener('click', () => {
+    popup.classList.toggle('visible');
+    body.classList.toggle('scroll-hidden');
+  });
+  
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      popup.classList.remove('visible');
+      body.classList.toggle('scroll-hidden');
+    }
+  });
+
+  // Закрыть модальное окно при клике по наружней области:
+  //1 Проверка, что клик был снаружи
+  popupInside.addEventListener('click', e => {
+    e.isClickOutOfPopup = true;
+  });
+
+  //2 Скрываем, если клик снаружи
+  popup.addEventListener('click', e => {
+    if (e.isClickOutOfPopup) return;
+    e.currentTarget.classList.remove('visible');
+    body.classList.toggle('scroll-hidden');
+  })
+
+  const swiper = new Swiper('.swiperFormats', {
+    // Optional parameters
+    // direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    mousewhell: true,
+  });
+
 });
 
 // document.querySelectorAll('.format-btn').forEach(elem => {
@@ -60,30 +106,6 @@ document.querySelectorAll('.card__content').forEach(function(formats) {
 //   });
 // })
 
-closePopup.addEventListener('click', () => {
-  popup.classList.toggle('visible');
-  body.classList.toggle('scroll-hidden');
-});
-
-window.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    popup.classList.remove('visible');
-    body.classList.toggle('scroll-hidden');
-  }
-});
-
-// Закрыть модальное окно при клике по наружней области:
-//1 Проверка, что клик был снаружи
-popupInside.addEventListener('click', e => {
-  e.isClickOutOfPopup = true;
-});
-
-//2 Скрываем, если клик снаружи
-popup.addEventListener('click', e => {
-  if (e.isClickOutOfPopup) return;
-  e.currentTarget.classList.remove('visible');
-  body.classList.toggle('scroll-hidden');
-})
 
 // document.addEventListener('click', e => console.log(e.target));
 
