@@ -1,9 +1,13 @@
-const burgerBtn = document.querySelector('.burger_btn')
-const headerBlock = document.querySelector('.header__block')
-const header = document.querySelector('.header')
-const hero = document.querySelector('.hero')
-const formats = document.querySelector('.formats__block')
-const containers = document.querySelectorAll('.container')
+const burgerBtn = document.querySelector('.burger_btn');
+const headerBlock = document.querySelector('.header__block');
+const header = document.querySelector('.header');
+const hero = document.querySelector('.hero');
+const formats = document.querySelector('.formats__block');
+const containers = document.querySelectorAll('.container');
+const popup = document.querySelector('.popup');
+const popupInside = document.querySelector('.popup .popup__block');
+const closePopup = document.querySelector('.close_popup');
+const body = document.querySelector('.body');
 
 // if (document.documentElement.clientWidth < 480) {
 //   headerBlock.classList.add('hide')
@@ -18,7 +22,7 @@ const hideAll = () => {
   containers.forEach((item) => {
     item.classList.toggle('hide');
   })
-}
+};
 
 document.querySelectorAll('#faq-elem').forEach(function (faqWrapper) {
   const faq = faqWrapper.querySelector('.faq-title');
@@ -33,23 +37,55 @@ document.querySelectorAll('#faq-elem').forEach(function (faqWrapper) {
   });
 });
 
-
 document.querySelectorAll('.nav').forEach(function (headerLinks) {
   const nav = headerLinks.querySelector('#nav-link');
-  
-  // nav.addEventListener('click', () => {
-  //   headerBlock.classList.remove('open');
-  //   header.classList.remove('open');
-  // })
 
-  // containers.forEach((item) => {
-  //   item.classList.remove('hide');
-  // })
+  nav.addEventListener('click', () => hideAll());
+});
 
-  nav.addEventListener('click', () => hideAll())
+document.querySelectorAll('.card__content').forEach(function(formats) {
+  const formatsBtn = formats.querySelector('.format-btn');
+  // тут вставить получение конкретного попапа для каждого формата
+
+  formatsBtn.addEventListener('click', () => {
+    popup.classList.toggle('visible')
+    body.classList.toggle('scroll-hidden');
+  });
+});
+
+// document.querySelectorAll('.format-btn').forEach(elem => {
+//   elem.addEventListener('click', () => {
+//     popup.classList.toggle('visible')
+//     console.log('popup!')
+//   });
+// })
+
+closePopup.addEventListener('click', () => {
+  popup.classList.toggle('visible');
+  body.classList.toggle('scroll-hidden');
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    popup.classList.remove('visible');
+    body.classList.toggle('scroll-hidden');
+  }
+});
+
+// Закрыть модальное окно при клике по наружней области:
+//1 Проверка, что клик был снаружи
+popupInside.addEventListener('click', e => {
+  e.isClickOutOfPopup = true;
+});
+
+//2 Скрываем, если клик снаружи
+popup.addEventListener('click', e => {
+  if (e.isClickOutOfPopup) return;
+  e.currentTarget.classList.remove('visible');
+  body.classList.toggle('scroll-hidden');
 })
 
-document.addEventListener('click', e => console.log(e.target));
+// document.addEventListener('click', e => console.log(e.target));
 
 const swiper = new Swiper('.mySwiper', {
   // Optional parameters

@@ -11,7 +11,7 @@
   <title>DK shot: сборные съемки Москва</title>
 </head>
 
-<body>
+<body class="body">
   <main>
     <!-- Start Big block header -->
     <header class="header" id="top">
@@ -132,10 +132,9 @@
                   Базовая съемка, передающая все характеристики товара
                 </span>
               </section>
-              <button class="button-full">Подробнее</button>
+              <button class="button-full format-btn">Подробнее</button>
             </section>
           </section>
-
 
           <section class="card imidge format">
             <section class="card__content">
@@ -147,7 +146,7 @@
                   Концептуальная съемка, передающая основной образ и характер коллекции
                 </span>
               </section>
-              <button class="button-full">Подробнее</button>
+              <button class="button-full format-btn">Подробнее</button>
             </section>
           </section>
 
@@ -162,7 +161,7 @@
                   Съемка, проведенная за пределами фотостудии
                 </span>
               </section>
-              <button class="button-full">Подробнее</button>
+              <button class="button-full format-btn">Подробнее</button>
             </section>
           </section>
 
@@ -177,10 +176,9 @@
                   Съемка, организованная специально под Вас
                 </span>
               </section>
-              <button class="button-full">Подробнее</button>
+              <button class="button-full format-btn">Подробнее</button>
             </section>
           </section>
-
 
           <section class="card video format">
             <section class="card__content">
@@ -192,10 +190,9 @@
                   Короткое видео для маркетплейсов
                 </span>
               </section>
-              <button class="button-full">Подробнее</button>
+              <button class="button-full format-btn">Подробнее</button>
             </section>
           </section>
-
 
           <section class="card reels format">
             <section class="card__content">
@@ -207,11 +204,72 @@
                   Концептуальное видео в формате Инстаграм
                 </span>
               </section>
-              <button class="button-full">Подробнее</button>
+              <button class="button-full format-btn">Подробнее</button>
             </section>
           </section>
         </section>
       </section>
+
+      <!-- Start popup block -->
+      <section class="popup container">
+        <div class="popup__block inner__container dark">
+          <button class="burger_btn close_popup">
+            <span></span><span></span>
+          </button>
+
+          <!-- Start popup content -->
+          <div class="popup_content">
+            <div class="block_title">
+              <h1>Каталог</h1>
+            </div>
+            <p>
+              Каталог — именно та <span class="bold">съемка, по которой покупатель будет принимать
+                финальное решение о покупке в интернет-магазине.</span>
+            </p>
+            <p>
+              Цель каталога — предоставить максимум визуальной
+              информации о конкретном товаре.
+            </p>
+
+            <!-- Slider main container -->
+            <div class="swiper mySwiper swiperFormats">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="./src/img/models/Nika-main.JPG" alt="model">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./src/img/models/Nika.JPG" alt="model">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./src/img/models/Nika1.JPG" alt="model">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./src/img/models/Nika2.JPEG" alt="model">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./src/img/models/Nika3.JPG" alt="model">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./src/img/models/Nika4.JPG" alt="model">
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev prev"></div>
+              <div class="swiper-button-next next"></div>
+            </div>
+
+            <button class="button-frame">Записаться на съемку</button>
+
+          </div>
+          <!-- End popup content -->
+      </section>
+      <!-- End popup block -->
+
     </div>
     <!-- End formats block -->
 
@@ -224,7 +282,6 @@
 
         <!-- Внешний контейнер для всех блоков прайса -->
         <section class="block_cards price">
-
           <!-- контейнер для 1 блока прайса -->
           <section class="price-block">
             <!-- price title => position: absolute -->
@@ -346,7 +403,6 @@
               </section>
             </section>
           </section>
-
         </section>
       </section>
     </div>
@@ -820,12 +876,11 @@
 
     <section>
       <div>
-
       </div>
     </section>
   </main>
-  <script src="./swiper/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script defer src="./swiper/swiper-bundle.min.js"></script>
+  <script defer src="script.js"></script>
 </body>
 
 </html>

@@ -137,6 +137,7 @@ button {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  position: relative;
 }
 
 .bold {
@@ -283,15 +284,16 @@ header {
   background-color: white;
 }
 
-.header.open .burger_btn span:nth-child(1) {
+.header.open .burger_btn span:nth-child(1){
   transform: translateY(0) rotate(45deg);
 }
 
-.header.open .burger_btn span:nth-child(2) {
+.header.open .burger_btn span:nth-child(2){
   opacity: 0;
 }
 
-.header.open .burger_btn span:nth-child(3) {
+.header.open .burger_btn span:nth-child(3),
+.popup-header .burger_btn span:nth-child(3) {
   transform: translateY(0) rotate(-45deg);
 }
 
@@ -533,6 +535,73 @@ header {
   font-size: 20px;
 }
 
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s;
+
+}
+
+.popup__block {
+  height: 100svh;
+  background-color: var(--dark-gray) !important;
+  padding: 10px; /* Убрать для мобильной версии */
+  font-size: 18px;
+  text-align: justify;
+  /* border-radius: 20px; */
+  max-width: 500px;
+  -webkit-box-shadow: 7px 7px 11px 0px rgba(51, 51, 51, 0.2);
+  -moz-box-shadow: 7px 7px 11px 0px rgba(51, 51, 51, 0.2);
+  box-shadow: 7px 7px 11px 0px rgba(51, 51, 51, 0.2);
+  gap: 0;
+}
+
+.popup.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close_popup span:nth-child(1){
+  transform: translateY(0) rotate(45deg);
+}
+
+.close_popup span:nth-child(2){
+  transform: translateY(0) rotate(-45deg);
+}
+
+.popup_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 300;
+}
+
+.popup_content .block_title {
+  text-transform: uppercase;
+}
+
+.swiperFormats {
+  /* add to mobile media */
+  /* max-width: 345px !important; */
+  width: 100%;
+}
+
+.scroll-hidden {
+  overflow: hidden;
+}
+
 .price {
   gap: 30px;
 }
@@ -689,6 +758,11 @@ header {
   font-size: 20px;
 }
 
+.faq-button {
+  display: flex;
+  align-self: center;
+}
+
 .faq-answer {
   align-self: flex-start;
   font-size: 18px;
@@ -702,8 +776,9 @@ header {
 }
 
 .block_title h3 {
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 600;
+  text-align: center;
 }
 
 .contacts__content {
