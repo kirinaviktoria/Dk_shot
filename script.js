@@ -4,14 +4,63 @@ const header = document.querySelector('.header');
 const hero = document.querySelector('.hero');
 const formats = document.querySelector('.formats__block');
 const containers = document.querySelectorAll('.container');
-
+const myBlur = document.querySelector('.blur');
 const body = document.querySelector('.body');
+const btnTop = document.querySelector('.button-up');
 
-// if (document.documentElement.clientWidth < 480) {
-//   headerBlock.classList.add('hide')
-// };
 
-burgerBtn.addEventListener('click', () => hideAll())
+//clear anchor
+function deleteAnchor() {
+  let str = document.location.toString();
+  document.location = str.substring(0, str.lenght - str.indexOf('#'));
+}
+
+// button top
+window.onscroll = () => {
+  if(window.scrollY > 700) {
+    btnTop.classList.remove('topHide')
+  } 
+  else if (window.scrollY < 700) {
+    btnTop.classList.add('topHide')
+  }
+}
+
+btnTop.addEventListener('click', (e) => {
+  // Плавная прокрутка до элемента с id = href у ссылки
+  document.querySelector('#top').scrollIntoView();
+})
+
+const toggleMobile = () => {
+  headerBlock.classList.toggle('open');
+  header.classList.toggle('open');
+  body.classList.toggle('scroll-hidden');
+  // hero.classList.toggle('hero-open')
+  body.classList.toggle('hero-open')
+  myBlur.classList.toggle('hide')
+}
+
+const toggleMain = () => {
+  document.querySelectorAll('.nav').forEach(function (headerLinks) {
+    const nav = headerLinks.querySelector('#nav-link');
+
+    nav.addEventListener("click", function(e) {
+      e.preventDefault() // Предотвратить стандартное поведение ссылок
+      // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
+      const goto = nav.getAttribute('href')
+      // Плавная прокрутка до элемента с id = href у ссылки
+      document.querySelector(goto).scrollIntoView()
+    })
+  });
+}
+
+const toggleTablet = () => {
+  header.classList.toggle('open');
+  headerBlock.classList.toggle('open');
+  myBlur.classList.toggle('hide')
+  body.classList.toggle('scroll-hidden');
+  hero.classList.toggle('hero-open');
+  // body.classList.toggle('hero-open')
+}
 
 const hideAll = () => {
   headerBlock.classList.toggle('open');
@@ -21,6 +70,38 @@ const hideAll = () => {
     item.classList.toggle('hide');
   })
 };
+
+if (window.innerWidth <= 668) {
+  burgerBtn.addEventListener('click', () => hideAll())
+
+  document.querySelectorAll('.nav').forEach(function (headerLinks) {
+    const nav = headerLinks.querySelector('#nav-link');
+  
+    nav.addEventListener('click', () => hideAll());
+  });
+}
+
+if (window.innerWidth > 668 && window.innerWidth <= 995 ) {
+  burgerBtn.addEventListener('click', () => toggleTablet())
+
+  document.querySelectorAll('.nav').forEach(function (headerLinks) {
+    const nav = headerLinks.querySelector('#nav-link');
+    nav.addEventListener('click', (e) => {
+      e.preventDefault() // Предотвратить стандартное поведение ссылок
+      // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
+      const goto = nav.getAttribute('href')
+      // Плавная прокрутка до элемента с id = href у ссылки
+      document.querySelector(goto).scrollIntoView()
+    })
+  });
+}
+
+if (window.innerWidth > 995 ) {
+  document.querySelectorAll('.nav').forEach(function (headerLinks) {
+    const nav = headerLinks.querySelector('#nav-link');
+    nav.addEventListener('click', () => toggleMain())
+  });
+}
 
 document.querySelectorAll('#faq-elem').forEach(function (faqWrapper) {
   const faq = faqWrapper.querySelector('.faq-title');
@@ -33,12 +114,6 @@ document.querySelectorAll('#faq-elem').forEach(function (faqWrapper) {
     plus.classList.toggle('hide');
     minus.classList.toggle('hide');
   });
-});
-
-document.querySelectorAll('.nav').forEach(function (headerLinks) {
-  const nav = headerLinks.querySelector('#nav-link');
-
-  nav.addEventListener('click', () => hideAll());
 });
 
 document.querySelectorAll('.format').forEach(function(formats) {
@@ -99,35 +174,6 @@ document.querySelectorAll('.format').forEach(function(formats) {
 
 });
 
-// document.querySelectorAll('.format-btn').forEach(elem => {
-//   elem.addEventListener('click', () => {
-//     popup.classList.toggle('visible')
-//     console.log('popup!')
-//   });
-// })
-
-
-// document.addEventListener('click', e => console.log(e.target));
-
-const swiper = new Swiper('.mySwiper', {
-  // Optional parameters
-  // direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  mousewhell: true,
-});
-
 const models_swiper = new Swiper('.modelsSwiper', {
   // Optional parameters
   // direction: 'horizontal',
@@ -147,3 +193,63 @@ const models_swiper = new Swiper('.modelsSwiper', {
 
   mousewhell: true,
 });
+
+// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//   if (window.innerWidth <= 668) {
+//     burgerBtn.addEventListener('touched', () => hideAll())
+  
+//     document.querySelectorAll('.nav').forEach(function (headerLinks) {
+//       const nav = headerLinks.querySelector('#nav-link');
+    
+//       nav.addEventListener('touched', () => hideAll());
+//     });
+//   }
+
+//   if (window.innerWidth > 668 && window.innerWidth <= 995 ) {
+//     burgerBtn.addEventListener('touched', () => {
+//       headerBlock.classList.toggle('open');
+//       header.classList.toggle('open');
+//       body.classList.toggle('scroll-hidden');
+//       hero.classList.toggle('hero-open')
+//       myBlur.classList.toggle('hide')
+//     })
+//   }
+// }
+
+// burgerBtn.addEventListener('click', () => hideAll())
+
+// document.querySelectorAll('.nav').forEach(function (headerLinks) {
+//   const nav = headerLinks.querySelector('#nav-link');
+
+//   nav.addEventListener('click', () => hideAll());
+// });
+
+// document.querySelectorAll('.format-btn').forEach(elem => {
+//   elem.addEventListener('click', () => {
+//     popup.classList.toggle('visible')
+//     console.log('popup!')
+//   });
+// })
+
+
+// document.addEventListener('click', e => console.log(e.target));
+
+// const swiper = new Swiper('.mySwiper', {
+//   // Optional parameters
+//   // direction: 'horizontal',
+//   effect: 'slide',
+//   loop: true,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+//   mousewhell: true,
+// });

@@ -17,9 +17,11 @@
     <!-- Start Big block header -->
     <header class="header" id="top">
       <!-- Start burger button block -->
-      <button class="burger_btn">
-        <span></span><span></span><span></span>
-      </button>
+      <!-- <section class="burger__wrapper"> -->
+        <button class="burger_btn">
+          <span></span><span></span><span></span>
+        </button>
+      <!-- </section> -->
       <!-- End burger button block -->
 
       <!-- Start Inner block header -->
@@ -101,7 +103,7 @@
                 получи готовый контент для своего бренда
               </h3>
             </section>
-
+    
             <section class="hero-buttons">
               <a href="https://t.me/kate_kazanka" target="_blank" class="button-full bigtext">
                 Оставить заявку
@@ -112,6 +114,8 @@
           </section>
         </section>
       </section>
+      
+      <div class="blur hide"></div>
     </div>
     <!-- End hero block -->
 
@@ -139,23 +143,35 @@
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
-                <button class="burger_btn close_popup">
-                  <span></span><span></span>
-                </button>
+                <div class="popup__header">
+                  <button class="burger_btn close_popup">
+                    <span></span><span></span>
+                  </button>
+                </div>
+
                 <!-- Start popup content -->
                 <div class="popup_content">
-                  <div class="block_title">
-                    <h1>Каталог</h1>
-                  </div>
-                  <p>
-                    Каталог — именно та <span class="bold">съемка, по которой покупатель будет принимать
-                      финальное решение о покупке в интернет-магазине.</span>
-                  </p>
-                  <p>
-                    Цель каталога — предоставить максимум визуальной
-                    информации о конкретном товаре.
-                  </p>
 
+                  <div class="popup_first-column">
+                    <div class="popup_text">
+                      <div class="block_title">
+                    <h1>Каталог</h1>
+                    </div>
+                    <div class="popup_descriprion">
+                      <p>
+                        Каталог — именно та <span class="bold">съемка, по которой покупатель будет принимать
+                          финальное решение о покупке в интернет-магазине.</span>
+                      </p>
+                      <p>
+                        Цель каталога — предоставить максимум визуальной
+                        информации о конкретном товаре.
+                      </p>
+                    </div>
+                    </div>
+                    
+                    <button class="button-frame popup-inner-button">Записаться на съемку</button>
+                  </div>
+                  
                   <!-- Slider main container -->
                   <div class="swiper mySwiper swiperFormats">
                     <!-- Additional required wrapper -->
@@ -200,7 +216,7 @@
                     <div class="swiper-button-next next"></div>
                   </div>
 
-                  <button class="button-frame">Записаться на съемку</button>
+                  <button class="button-frame popup-outer-button">Записаться на съемку</button>
                 </div>
                 <!-- End popup content -->
             </section>
@@ -224,9 +240,12 @@
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
-                <button class="burger_btn close_popup">
+                <div class="popup__header">
+                  <button class="burger_btn close_popup">
                   <span></span><span></span>
-                </button>
+                  </button>
+                </div>
+
                 <!-- Start popup content -->
                 <div class="popup_content">
                   <div class="block_title">
@@ -303,12 +322,16 @@
               </section>
               <button class="button-full format-btn">Подробнее</button>
             </section>
+
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
-                <button class="burger_btn close_popup">
+                <div class="popup__header">
+                  <button class="burger_btn close_popup">
                   <span></span><span></span>
-                </button>
+                  </button>
+                </div>
+
                 <!-- Start popup content -->
                 <div class="popup_content">
                   <div class="block_title">
@@ -386,12 +409,16 @@
               </section>
               <button class="button-full format-btn">Подробнее</button>
             </section>
+
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
-                <button class="burger_btn close_popup">
+                <div class="popup__header">
+                  <button class="burger_btn close_popup">
                   <span></span><span></span>
-                </button>
+                  </button>
+                </div>
+
                 <!-- Start popup content -->
                 <div class="popup_content">
                   <div class="block_title">
@@ -468,12 +495,16 @@
               </section>
               <button class="button-full format-btn">Подробнее</button>
             </section>
+
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
-                <button class="burger_btn close_popup">
+                <div class="popup__header">
+                  <button class="burger_btn close_popup">
                   <span></span><span></span>
-                </button>
+                  </button>
+                </div>
+
                 <!-- Start popup content -->
                 <div class="popup_content">
                   <div class="block_title">
@@ -550,12 +581,15 @@
               </section>
               <button class="button-full format-btn">Подробнее</button>
             </section>
+
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
-                <button class="burger_btn close_popup">
+                <div class="popup__header">
+                  <button class="burger_btn close_popup">
                   <span></span><span></span>
-                </button>
+                  </button>
+                </div>
                 <!-- Start popup content -->
                 <div class="popup_content">
                   <div class="block_title">
@@ -724,7 +758,7 @@
           </section>
 
           <!-- контейнер для 1 блока прайса -->
-          <section class="price-block">
+          <section class="price-block dop">
             <section class="price-title">
               Дополнительные услуги
             </section>
@@ -741,7 +775,7 @@
           </section>
 
           <!-- контейнер для 1 блока прайса -->
-          <section class="price-block">
+          <section class="price-block ind">
             <section class="price-title">
               ИНДИВИДУАЛЬНАЯ ПОД КЛЮЧ
             </section>
@@ -997,7 +1031,6 @@
     <!-- End models block -->
 
     <!-- Start About us block-->
-    <!-- Start About us block-->
     <section class="container light" id="about">
       <section class="inner__container">
         <section class="block_title">
@@ -1151,7 +1184,7 @@
     <section class="container light contacts" id="contacts">
       <section class="inner__container">
         <section class="block_title">
-          <h3>Следите за нами в социальных сетях</h3>
+          <h1>Следите за нами в социальных сетях</h1>
         </section>
 
         <section class="contacts__content">
@@ -1209,9 +1242,13 @@
     <!-- End Footer -->
 
 
-    <section>
-      <div>
-      </div>
+
+    <section class="">
+      <a href="#" class="button-up button-full topHide">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 15L12 7L20 15" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>          
+      </a>
     </section>
   </main>
   <script defer src="./swiper/swiper-bundle.min.js"></script>
