@@ -8,7 +8,7 @@ const containers = document.querySelectorAll('.container');
 const myBlur = document.querySelector('.blur');
 const body = document.querySelector('.body');
 const btnTop = document.querySelector('.button-up');
-
+const upWrapper = document.querySelector('.up_wrapper')
 
 
 //clear anchor
@@ -124,22 +124,27 @@ document.querySelectorAll('.format').forEach(function(formats) {
   const popup = formats.querySelector('.popup');
   const popupInside = formats.querySelector('.popup .popup__block');
   const closePopup = formats.querySelector('.close_popup');
-  // тут вставить получение конкретного попапа для каждого формата
 
   formatsBtn.addEventListener('click', () => {
     popup.classList.toggle('visible')
     body.classList.toggle('scroll-hidden');
+    btnTop.classList.toggle('topHide')
+    upWrapper.classList.toggle('hide')
   });
 
   closePopup.addEventListener('click', () => {
     popup.classList.toggle('visible');
     body.classList.toggle('scroll-hidden');
+    btnTop.classList.toggle('topHide')
+    upWrapper.classList.toggle('hide')
   });
   
   window.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       popup.classList.remove('visible');
       body.classList.toggle('scroll-hidden');
+      btnTop.classList.toggle('topHide')
+      upWrapper.classList.toggle('hide')
     }
   });
 
@@ -154,6 +159,8 @@ document.querySelectorAll('.format').forEach(function(formats) {
     if (e.isClickOutOfPopup) return;
     e.currentTarget.classList.remove('visible');
     body.classList.toggle('scroll-hidden');
+    btnTop.classList.toggle('topHide')
+    upWrapper.classList.toggle('hide')
   })
 
   const swiper = new Swiper('.swiperFormats', {
