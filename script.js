@@ -1,12 +1,14 @@
 const burgerBtn = document.querySelector('.burger_btn');
 const headerBlock = document.querySelector('.header__block');
 const header = document.querySelector('.header');
+const navLogo = document.querySelector('.navLogo');
 const hero = document.querySelector('.hero');
 const formats = document.querySelector('.formats__block');
 const containers = document.querySelectorAll('.container');
 const myBlur = document.querySelector('.blur');
 const body = document.querySelector('.body');
 const btnTop = document.querySelector('.button-up');
+
 
 
 //clear anchor
@@ -34,9 +36,9 @@ const toggleMobile = () => {
   headerBlock.classList.toggle('open');
   header.classList.toggle('open');
   body.classList.toggle('scroll-hidden');
-  // hero.classList.toggle('hero-open')
-  body.classList.toggle('hero-open')
-  myBlur.classList.toggle('hide')
+  hero.classList.toggle('hero-open');
+  // body.classList.toggle('hero-open')
+  myBlur.classList.toggle('hide');
 }
 
 const toggleMain = () => {
@@ -66,12 +68,12 @@ const hideAll = () => {
   headerBlock.classList.toggle('open');
   header.classList.toggle('open');
 
-  containers.forEach((item) => {
-    item.classList.toggle('hide');
-  })
+  // containers.forEach((item) => {
+  //   item.classList.toggle('hide');
+  // })
 };
 
-if (window.innerWidth <= 668) {
+if (window.innerWidth <= 745) {
   burgerBtn.addEventListener('click', () => hideAll())
 
   document.querySelectorAll('.nav').forEach(function (headerLinks) {
@@ -81,12 +83,13 @@ if (window.innerWidth <= 668) {
   });
 }
 
-if (window.innerWidth > 668 && window.innerWidth <= 995 ) {
+if (window.innerWidth > 745 && window.innerWidth <= 995 ) {
   burgerBtn.addEventListener('click', () => toggleTablet())
 
   document.querySelectorAll('.nav').forEach(function (headerLinks) {
     const nav = headerLinks.querySelector('#nav-link');
     nav.addEventListener('click', (e) => {
+      toggleTablet();
       e.preventDefault() // Предотвратить стандартное поведение ссылок
       // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
       const goto = nav.getAttribute('href')
@@ -232,7 +235,7 @@ const models_swiper = new Swiper('.modelsSwiper', {
 // })
 
 
-// document.addEventListener('click', e => console.log(e.target));
+document.addEventListener('click', e => console.log(e.target));
 
 // const swiper = new Swiper('.mySwiper', {
 //   // Optional parameters

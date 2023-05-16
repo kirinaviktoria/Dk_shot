@@ -18,7 +18,7 @@
   }
 }
 
-@media screen and (min-width: 425px) and (max-width: 850px) {
+@media screen and (max-width: 850px) {
   .model_wrapper {
     max-width: 385px;
     max-height: 500px;
@@ -28,9 +28,73 @@
     min-height: 555px;
   }
 
+  /* .popup {
+    padding: 0;
+  } */
+}
+
+@media screen and (max-width: 700px) {
   .popup {
     padding: 0;
+    background-color: var(--dark-gray);
   }
+}
+
+@media screen and (max-width: 500px) { 
+  /* .popup_descriprion {
+    padding: 0 20px;
+  } */
+
+  /* .popup {
+    padding: 0 20px;
+    background-color: var(--dark-gray);
+  } */
+
+  .popup_content {
+    padding: 0 10px !important;
+  }
+
+  .popup_content .block_title h1 {
+    font-size: 18px !important;
+  }
+}
+
+/* popup height */
+@media screen and (min-width: 450px) and (min-height: 900px) and (max-width: 1200px){
+  .popup_text .block_title h1 {
+    font-size: 26px !important;
+  }
+
+  .popup_text .popup_descriprion p{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .popup__block {
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .popup_text {
+    gap: 10px;
+  }
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 850px) { 
+  .popup_content {
+    padding: 0 20px;
+  }
+
+  .popup_content .block_title h1{
+    /* font-size: 20px !important; */
+  }
+}
+
+@media screen and (max-width: 995px) { 
+
+
 }
 
 @media screen and (min-width: 850px) and (max-width: 1100px) {
@@ -46,7 +110,6 @@
 }
 
 @media screen and (max-width: 1200px) { 
-
   .about .text {
     font-size: 18px;
   }
@@ -63,6 +126,7 @@
 
 /* Прайс в 1 колонку */
 @media screen and (max-width: 850px) {
+
     /* Прайс в 1 колонку */
   .price {
     grid-template-columns: 1fr;
@@ -84,9 +148,6 @@
     padding: 20px 80px;
   }
 
-  .popup {
-    padding: 0;
-  }
 
   /* карточки на 2 колонки */
   .block_cards, .models_block {
@@ -101,7 +162,7 @@
 }
 
 /* Общие правила, начиная с планшета */
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 745px) {
   .hero__block {
     padding-bottom: 20px;
     gap: 30px;
@@ -162,7 +223,7 @@
 }
 
 /* Ограничения от планшета до самого большого размера */
-@media screen and (min-width: 668px) and (max-width: 1150px) {
+@media screen and (min-width: 745px) and (max-width: 1150px) {
   .header__links {
     max-width: 400px;
   }
@@ -239,7 +300,7 @@
 }
 
 /* to phone */
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 745px) {
   header.open {
     /* Размер для мобильного экрана, подстраивающий высоту */
     height: 100svh;
@@ -257,7 +318,7 @@
 
   .popup__block {
     font-size: 16px;
-    padding: 15px;
+    padding: 0;
   }
 
   .popup_content .block_title h1 {
@@ -383,10 +444,6 @@
     height: 100%;
   }
 
-  .popup_content .block_title h1{
-    font-size: 20px !important;
-  }
-
   .popup_content p {
     font-size: 16px;
   }
@@ -398,7 +455,7 @@
   }
 }
 
-@media screen and (min-width: 668px) and (max-width: 995px) {
+@media screen and (min-width: 745px) and (max-width: 995px) {
   .header.open {
     /* Размер для мобильного экрана, подстраивающий ширину */
     width: 50svw;
@@ -441,15 +498,76 @@
   }
 }
 
-@media screen and (min-width: 995px) {
+@media screen and (min-width: 700px) and (max-width: 950px){
+  .popup {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 425px) and (max-height: 860px){
+  .swiperFormats {
+    /* max-width: 520px;
+    max-height: 500px; */
+
+    max-width: 100svw;
+    max-height: 500px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 950px){
+  .swiperFormats {
+    /* max-width: 520px;
+    max-height: 500px; */
+
+    /* max-width: 100svw; */
+    /* max-width: 520px; */
+    max-height: 600px;
+  }
+}
+
+@media screen and (min-height: 860px) and (max-height: 1050px) {
+  .swiperFormats {
+    /* max-width: 520px;
+    max-height: 500px; */
+
+    /* max-width: 100svw; */
+    max-height: 550px;
+  }
+}
+
+@media screen and (min-height: 1050px) and (max-width: 950px) {
+  .swiperFormats {
+    max-width: 520px;
+    max-height: 700px;
+  }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1100px) {
+  .swiperFormats {
+    max-width: 520px;
+    max-height: 800px;
+  }
+}
+
+
+
+/* @media screen and (min-width: 425px) and (max-width: 950px) {
+  .swiperFormats {
+    max-width: 520px;
+    max-height: 700px;
+    width: 100%;
+    height: 100%;
+  }
+} */
+
+@media screen and (min-width: 950px){
   .popup .container {
     padding: 0 !important;
   }
 
   .popup__block {
     height: fit-content;
-    padding-left: 60px;
-    padding-right: 60px;
     gap: 30px;
   }
 
@@ -469,24 +587,13 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
+    max-width: 500px;
+    width: 100%;
     /* justify-content: space-between; */
-  }
-
-  .popup_text .block_title h1{
-    font-size: 30px;
   }
 
   .popup_text {
     justify-content: space-between;
-  }
-
-  .popup_descriprion {
-    gap: 30px;
-
-  }
-
-  .popup_descriprion p {
-    font-size: 20px;
   }
 
   .popup-outer-button {
@@ -499,9 +606,23 @@
     /* display: grid; */
     /* justify-self: flex-end; */
   }
-
+  
   .swiperFormats {
     max-height: 800px;
+  }
+
+}
+
+@media screen and (min-width: 950px) and (max-width: 1200px) {
+  .popup_text .block_title h1{
+    font-size: 30px;
+  }
+  .popup_descriprion {
+    gap: 30px;
+  }
+
+  .popup_descriprion p {
+    font-size: 20px;
   }
 }
 
@@ -550,8 +671,29 @@
     padding-right: 60px;
   }
 
+  .popup__block {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .popup_text .block_title h1 {
+    font-size: 30px;
+  }
+
+  .popup_descriprion {
+    gap: 50px;
+  }
+
+  .popup_descriprion p {
+    font-size: 25px;  
+  }
+
   .about-description {
     font-size: 24px;
+  }
+
+  .swiperFormats {
+    max-width: 500px;
   }
 }
 
