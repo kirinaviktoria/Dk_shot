@@ -8,29 +8,38 @@ const containers = document.querySelectorAll('.container');
 const myBlur = document.querySelector('.blur');
 const body = document.querySelector('.body');
 const btnTop = document.querySelector('.button-up');
-const upWrapper = document.querySelector('.up_wrapper')
+// const upWrapper = document.querySelector('.up_wrapper');
+const promoBtn = document.querySelector('.promo-btn');
+const promoPopup = document.querySelector('.promo-popup');
+const closePopup = document.querySelector('.close_popup');
 
+
+//promoPopup
+promoBtn.addEventListener('click', function() {
+  promoPopup.classList.toggle('visible');
+  body.classList.toggle('scroll-hidden');
+  btnTop.classList.toggle('topHide');
+})
+
+closePopup.addEventListener('click', () => {
+  promoPopup.classList.toggle('visible');
+  body.classList.toggle('scroll-hidden');
+  btnTop.classList.toggle('topHide');
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    promoPopup.classList.remove('visible');
+    body.classList.toggle('scroll-hidden');
+    btnTop.classList.toggle('topHide');
+  }
+});
 
 //clear anchor
 function deleteAnchor() {
   let str = document.location.toString();
   document.location = str.substring(0, str.lenght - str.indexOf('#'));
 }
-
-// button top
-window.onscroll = () => {
-  if(window.scrollY > 700) {
-    btnTop.classList.remove('topHide')
-  } 
-  else if (window.scrollY < 700) {
-    btnTop.classList.add('topHide')
-  }
-}
-
-btnTop.addEventListener('click', (e) => {
-  // Плавная прокрутка до элемента с id = href у ссылки
-  document.querySelector('#top').scrollIntoView();
-})
 
 const toggleMobile = () => {
   headerBlock.classList.toggle('open');
@@ -67,6 +76,7 @@ const toggleTablet = () => {
 const hideAll = () => {
   headerBlock.classList.toggle('open');
   header.classList.toggle('open');
+  body.classList.toggle('scroll-hidden');
 
   // containers.forEach((item) => {
   //   item.classList.toggle('hide');
@@ -126,25 +136,25 @@ document.querySelectorAll('.format').forEach(function(formats) {
   const closePopup = formats.querySelector('.close_popup');
 
   formatsBtn.addEventListener('click', () => {
-    popup.classList.toggle('visible')
+    popup.classList.toggle('visible');
     body.classList.toggle('scroll-hidden');
-    btnTop.classList.toggle('topHide')
-    upWrapper.classList.toggle('hide')
+    btnTop.classList.toggle('topHide');
+    // upWrapper.classList.toggle('hide')
   });
 
   closePopup.addEventListener('click', () => {
     popup.classList.toggle('visible');
     body.classList.toggle('scroll-hidden');
-    btnTop.classList.toggle('topHide')
-    upWrapper.classList.toggle('hide')
+    btnTop.classList.toggle('topHide');
+    // upWrapper.classList.toggle('hide')
   });
   
   window.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       popup.classList.remove('visible');
       body.classList.toggle('scroll-hidden');
-      btnTop.classList.toggle('topHide')
-      upWrapper.classList.toggle('hide')
+      btnTop.classList.toggle('topHide');
+      // upWrapper.classList.toggle('hide')
     }
   });
 
@@ -159,8 +169,8 @@ document.querySelectorAll('.format').forEach(function(formats) {
     if (e.isClickOutOfPopup) return;
     e.currentTarget.classList.remove('visible');
     body.classList.toggle('scroll-hidden');
-    btnTop.classList.toggle('topHide')
-    upWrapper.classList.toggle('hide')
+    btnTop.classList.toggle('topHide');
+    // upWrapper.classList.toggle('hide')
   })
 
   const swiper = new Swiper('.swiperFormats', {
@@ -204,6 +214,21 @@ const models_swiper = new Swiper('.modelsSwiper', {
   mousewhell: true,
 });
 
+// button top
+window.onscroll = () => {
+  if(window.scrollY > 700) {
+    btnTop.classList.remove('topHide')
+  } 
+  else if (window.scrollY < 700 || popup.classList.сontains('visible')) {
+    btnTop.classList.add('topHide')
+  }
+}
+
+btnTop.addEventListener('click', (e) => {
+  // Плавная прокрутка до элемента с id = href у ссылки
+  document.querySelector('#top').scrollIntoView();
+})
+
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 //   if (window.innerWidth <= 668) {
 //     burgerBtn.addEventListener('touched', () => hideAll())
@@ -242,7 +267,7 @@ const models_swiper = new Swiper('.modelsSwiper', {
 // })
 
 
-document.addEventListener('click', e => console.log(e.target));
+// document.addEventListener('click', e => console.log(e.target));
 
 // const swiper = new Swiper('.mySwiper', {
 //   // Optional parameters

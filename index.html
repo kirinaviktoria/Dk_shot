@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="icon" href="./src/img/icons/DK.png" type="image/png">
   <link rel="stylesheet" href="./swiper/swiper-bundle.css">
   <link rel="stylesheet" href="./css/removedefault.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -26,38 +27,41 @@
 
       <!-- Start Inner block header -->
       <div class="header__block">
-        <!-- Start logo block in header -->
-        <section class="header__block-logo">
-          <a href="#top" class="navLogo">
-            <img src="src/img/logo_white.svg" alt="logo" class="navLogo img-logo">
-          </a>
-        </section>
-        <!-- End logo block in header -->
-
-        <!-- Start navigation block -->
-        <nav class="header__nav">
-          <ul class="header__links">
-            <li class="nav">
-              <a href="#formats" id="nav-link">форматы съемок</a>
-            </li>
-            <li class="nav">
-              <a href="#price" id="nav-link">прайс</a>
-            </li>
-            <li class="nav">
-              <a href="#models" id="nav-link">модели</a>
-            </li>
-            <li class="nav">
-              <a href="#about" id="nav-link">о нас</a>
-            </li>
-            <li class="nav">
-              <a href="#contacts" id="nav-link">контакты</a>
-            </li>
-            <li class="nav">
-              <a href="#faq" id="nav-link">FAQ</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- End navigation block -->
+        <!-- <section class="header__first"> -->
+          <!-- Start logo block in header -->
+          <section class="header__block-logo">
+            <a href="#top" class="navLogo">
+              <img src="src/img/logo-light.svg" alt="logo" class="navLogo img-logo">
+            </a>
+          </section>
+          <!-- End logo block in header -->
+        
+          <!-- Start navigation block -->
+          <nav class="header__nav">
+            <ul class="header__links">
+              <li class="nav">
+                <a href="#formats" id="nav-link">форматы съемок</a>
+              </li>
+              <li class="nav">
+                <a href="#price" id="nav-link">прайс</a>
+              </li>
+              <li class="nav">
+                <a href="#models" id="nav-link">модели</a>
+              </li>
+              <li class="nav">
+                <a href="#about" id="nav-link">о нас</a>
+              </li>
+              <li class="nav">
+                <a href="#contacts" id="nav-link">контакты</a>
+              </li>
+              <li class="nav">
+                <a href="#faq" id="nav-link">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- End navigation block -->
+        <!-- </section> -->
+        
 
         <!-- Start header buttons block -->
         <div class="header__buttons">
@@ -118,6 +122,61 @@
       <div class="blur hide"></div>
     </div>
     <!-- End hero block -->
+
+    <!-- START promo -->
+    <section class="container light">
+      <section class="inner__container">
+        <section class="block_title promo-text">
+          <h1>Заполни заявку и получи скидку на первый заказ</h1>
+        </section>
+    
+        <section class="promoBtn__wrapper">
+          <button class="button-full bigtext promo-btn">Заполнить заявку</button>
+        </section>
+    
+        <!-- START popup block-->
+        <section class="popup container promo-popup">
+          <div class="popup__block inner__container dark promoPopup__inner">
+            <div class="popup__header">
+              <button class="burger_btn close_popup">
+                <span></span><span></span>
+              </button>
+            </div>
+            <!-- Start popup content -->
+            <div class="promo-popup-content">
+              <div class="block_title">
+                <h1>Заполнить заявку</h1>
+              </div>
+
+              <form action="" class="promo_form">
+                <div class="promo_form_controls">
+                  <input type="text" name="name" class="form-control" placeholder="Имя"></input>
+                  <input type="tel" name="phone" class="form-control" placeholder="Телефон"></input>
+
+                  <div class="form-popup__row">
+                    <div>Где с Вами связаться?</div>
+                    <div class="form-popup__radio">
+                      <input type="radio" name="messanger" id="tg">
+                      <label for="tg">Telegram</label>
+                      <input type="radio" name="messanger" id="wa">
+                      <label for="wa">WhatsApp</label>
+                    </div>
+                  </div>  
+
+                  <textarea name="message" id="" class="form-control textarea" placeholder="Опишите Ваш запрос"></textarea>
+                </div>
+                
+                <button class="button-full bigtext promo-btn">отправить</button>
+              </form>
+
+
+            </div>
+             <!-- End popup content -->
+        </section>
+        <!-- End popup block -->
+      </section>
+    </section>
+    <!-- END promo -->
 
     <!-- Start formats block -->
     <div class="container" id="formats">
@@ -210,7 +269,7 @@
                         </div>
                       </div>
                       <!-- If we need pagination -->
-                      <div class="swiper-pagination"></div>
+                      <!-- <div class="swiper-pagination"></div> -->
                   
                       <!-- If we need navigation buttons -->
                       <div class="swiper-button-prev prev"></div>
@@ -312,7 +371,7 @@
                       </div>
                     </div>
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
 
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
@@ -419,7 +478,7 @@
                       </div>
                     </div>
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
           
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
@@ -521,7 +580,7 @@
                       </div>
                     </div>
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
           
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
@@ -627,7 +686,7 @@
                       </div>
                     </div>
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
           
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
@@ -731,7 +790,7 @@
                       </div>
                     </div>
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
           
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
@@ -1093,10 +1152,10 @@
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide_models swiper-slide">
-                  <img src="./src/img/models/Alena2.jpg" alt="model">
+                  <img src="./src/img/models/Alena-main.JPG" alt="model">
                 </div>
                 <div class="swiper-slide_models swiper-slide">
-                  <img src="./src/img/models/Alena-main.JPG" alt="model">
+                  <img src="./src/img/models/Alena2.jpg" alt="model">
                 </div>
                 <div class="swiper-slide_models swiper-slide">
                   <img src="./src/img/models/Alena.JPG" alt="model">
