@@ -458,7 +458,7 @@
 
   .popup__block {
     /* max-height: 100vh; */
-    height: 100%;
+    /* height: 100%; */
     overflow: auto;
   }
 
@@ -471,12 +471,11 @@
     padding: 0 10px 10px 10px;
   }
 
-  .form-popup__row {
+  /* .form-popup__row {
     padding: 0;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+    gap: 5px;
+  } */
 
 }
 
@@ -655,7 +654,7 @@
 
   .promoPopup__inner {
     padding: 30px;
-    height: 100%;
+    /* height: 100%; */
     gap: 0;
   }
 

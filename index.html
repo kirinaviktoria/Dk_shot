@@ -19,49 +19,49 @@
     <header class="header" id="top">
       <!-- Start burger button block -->
       <!-- <section class="burger__wrapper"> -->
-        <button class="burger_btn">
-          <span></span><span></span><span></span>
-        </button>
+      <button class="burger_btn">
+        <span></span><span></span><span></span>
+      </button>
       <!-- </section> -->
       <!-- End burger button block -->
 
       <!-- Start Inner block header -->
       <div class="header__block">
         <!-- <section class="header__first"> -->
-          <!-- Start logo block in header -->
-          <section class="header__block-logo">
-            <a href="#top" class="navLogo">
-              <img src="src/img/logo-light.svg" alt="logo" class="navLogo img-logo">
-            </a>
-          </section>
-          <!-- End logo block in header -->
-        
-          <!-- Start navigation block -->
-          <nav class="header__nav">
-            <ul class="header__links">
-              <li class="nav">
-                <a href="#formats" id="nav-link">форматы съемок</a>
-              </li>
-              <li class="nav">
-                <a href="#price" id="nav-link">прайс</a>
-              </li>
-              <li class="nav">
-                <a href="#models" id="nav-link">модели</a>
-              </li>
-              <li class="nav">
-                <a href="#about" id="nav-link">о нас</a>
-              </li>
-              <li class="nav">
-                <a href="#contacts" id="nav-link">контакты</a>
-              </li>
-              <li class="nav">
-                <a href="#faq" id="nav-link">FAQ</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- End navigation block -->
+        <!-- Start logo block in header -->
+        <section class="header__block-logo">
+          <a href="#top" class="navLogo">
+            <img src="src/img/logo-light.svg" alt="logo" class="navLogo img-logo">
+          </a>
+        </section>
+        <!-- End logo block in header -->
+
+        <!-- Start navigation block -->
+        <nav class="header__nav">
+          <ul class="header__links">
+            <li class="nav">
+              <a href="#formats" id="nav-link">форматы съемок</a>
+            </li>
+            <li class="nav">
+              <a href="#price" id="nav-link">прайс</a>
+            </li>
+            <li class="nav">
+              <a href="#models" id="nav-link">модели</a>
+            </li>
+            <li class="nav">
+              <a href="#about" id="nav-link">о нас</a>
+            </li>
+            <li class="nav">
+              <a href="#contacts" id="nav-link">контакты</a>
+            </li>
+            <li class="nav">
+              <a href="#faq" id="nav-link">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- End navigation block -->
         <!-- </section> -->
-        
+
 
         <!-- Start header buttons block -->
         <div class="header__buttons">
@@ -94,6 +94,25 @@
     </header>
     <!-- End Big block header -->
 
+    <!-- Promo anounce -->
+    <!-- <section class="container dark anounce">
+      <section class="inner__container anounce__inner">
+
+        <div class="popup__header">
+          <button class="burger_btn close_announce">
+            <span></span><span></span>
+          </button>
+        </div>
+
+        <div class="announce_text">
+          Оставь заявку и получи скидку на первую съемку!
+        </div>
+
+      </section>
+    </section> -->
+    <!-- End Promo anounce -->
+
+
     <!-- Start hero block -->
     <div class="hero">
       <section class="container">
@@ -107,7 +126,7 @@
                 получи готовый контент для своего бренда
               </h3>
             </section>
-    
+
             <section class="hero-buttons">
               <a href="https://t.me/kate_kazanka" target="_blank" class="button-full bigtext">
                 Оставить заявку
@@ -117,8 +136,9 @@
             </section>
           </section>
         </section>
+
       </section>
-      
+
       <div class="blur hide"></div>
     </div>
     <!-- End hero block -->
@@ -129,11 +149,11 @@
         <section class="block_title promo-text">
           <h1>Заполни заявку и получи скидку на первый заказ</h1>
         </section>
-    
+
         <section class="promoBtn__wrapper">
           <button class="button-full bigtext promo-btn">Заполнить заявку</button>
         </section>
-    
+
         <!-- START popup block-->
         <section class="popup container promo-popup">
           <div class="popup__block inner__container dark promoPopup__inner">
@@ -145,33 +165,108 @@
             <!-- Start popup content -->
             <div class="promo-popup-content">
               <div class="block_title">
-                <h1>Заполнить заявку</h1>
+                <h1 class="form__title">Анкета предзаписи</h1>
               </div>
 
-              <form action="" class="promo_form">
+              <form action="#" class="promo_form">
                 <div class="promo_form_controls">
-                  <input type="text" name="name" class="form-control" placeholder="Имя"></input>
-                  <input type="tel" name="phone" class="form-control" placeholder="Телефон"></input>
+                  <!-- ФИО -->
+                  <input type="text" name="name" class="form-control _req" placeholder="ФИО*"></input>
+                  <!-- телефон -->
+                  <input type="tel" name="phone" class="form-control _req _phone" placeholder="Телефон*"></input>
+                  <!-- email -->
+                  <input type="email" name="email" class="form-control _email" placeholder="e-mail"></input>
 
-                  <div class="form-popup__row">
-                    <div>Где с Вами связаться?</div>
-                    <div class="form-popup__radio">
-                      <input type="radio" name="messanger" id="tg">
-                      <label for="tg">Telegram</label>
-                      <input type="radio" name="messanger" id="wa">
-                      <label for="wa">WhatsApp</label>
+                  <!-- Описание съемки -->
+                  <div class="form__item">
+                    <label for="description" class="form__label">Что именно нужно отснять? (количество и описание позиций)*</label>
+                    <textarea name="description" id="description" class="form-control _req"></textarea>
+                  </div>
+
+                  <!-- фон -->
+                  <div class="form__item">
+                    <div class="form__label">Фон:</div>
+                    <select name="background" id="background" class="select">
+                      <option value="Интерьер" selected="selected">Интерьер</option>
+                      <option value="Белая стена">Белая стена + бетонный пол</option>
+                    </select>
+                  </div>
+
+                  <!-- формат -->
+                  <div class="form__item">
+                    <div class="form__label">Формат:</div>
+                    <select name="format-select" id="format-select" class="select">
+                      <option value="Каталог" selected="selected">Каталог</option>
+                      <option value="Имиджевый лукбук">Имиджевый лукбук</option>
+                    </select>
+                  </div>
+
+                 <!-- видеопроходка -->
+                  <div class="form__item">
+                    <div class="checkbox">
+                        <input type="checkbox" name="walking" id="Walking" value="видеопроходка нужна" class="checkbox__input">
+                        <label for="Walking" class="form__label checkbox__label">Нужна видеопроходка</label>
                     </div>
-                  </div>  
+                  </div>
 
-                  <textarea name="message" id="" class="form-control textarea" placeholder="Опишите Ваш запрос"></textarea>
+                  <!-- рилс -->
+                  <div class="form__item">
+                    <div class="checkbox">
+                        <input type="checkbox" name="reels" id="Reels" value="нужен рилс" class="checkbox__input">
+                        <label for="Reels" class="form__label checkbox__label">Нужен Рилс</label>
+                    </div>
+                  </div>
+
+                  <!-- стилизация -->
+                  <div class="form__item">
+                    <div class="checkbox">
+                        <input type="checkbox" name="styling" id="Styling" value="нужна стилизация" class="checkbox__input">
+                        <label for="Styling" class="form__label checkbox__label">Нужна стилизация образа (подбор доп. одежды)</label>
+                    </div>
+                  </div>
+
+                  <!-- 10. Можете загрузить референсы - позы/настроение/ракурсы -->
+                  <div class="form__item">
+                    <div class="form__label">Можете загрузить референсы - позы/настроение/ракурсы</div>
+                    <div class="file">
+                      <div class="file__item">
+                        <input id="formImage" accept=".jpg, .jpeg, .png, .gif" type="file" name="refs" class="file__input">
+                        <button class="file__button button-full">Выбрать</button>
+                      </div>
+
+                      <div class="file__preview" id="filePreview">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- где связаться -->
+                  <div class="form__item">
+                    <div class="form__label">Где с Вами связаться?</div>
+                    <div class="options">
+                      <div class="options__item">
+                        <input type="radio" checked name="messanger" id="tg" value="telegram" class="options_input">
+                        <label for="tg" class="form__label options_label"><span>Telegram</span></label>
+                      </div>
+
+                      <div class="options__item">
+                        <input type="radio" name="messanger" id="wa" value="WhatsApp" class="options_input">
+                        <label for="wa" class="form__label options_label"><span>WhatsApp</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="button-full bigtext promo-submit">отправить</button>
+              
+                <div class="spinner__wrapper">
+                  <div class="spinner"></div>
                 </div>
                 
-                <button class="button-full bigtext promo-btn">отправить</button>
-              </form>
 
-
+               </form>
             </div>
-             <!-- End popup content -->
+            <!-- End popup content -->
         </section>
         <!-- End popup block -->
       </section>
@@ -213,73 +308,73 @@
                   <div class="popup_first-column">
                     <div class="popup_text">
                       <div class="block_title">
-                    <h1>Каталог</h1>
+                        <h1>Каталог</h1>
+                      </div>
+                      <div class="popup_descriprion">
+                        <p>
+                          Каталог — именно та <span class="bold">съемка, по которой покупатель будет принимать
+                            финальное решение о покупке в интернет-магазине.</span>
+                        </p>
+                        <p>
+                          Цель каталога — предоставить максимум визуальной
+                          информации о конкретном товаре.
+                        </p>
+                      </div>
                     </div>
-                    <div class="popup_descriprion">
-                      <p>
-                        Каталог — именно та <span class="bold">съемка, по которой покупатель будет принимать
-                          финальное решение о покупке в интернет-магазине.</span>
-                      </p>
-                      <p>
-                        Цель каталога — предоставить максимум визуальной
-                        информации о конкретном товаре.
-                      </p>
-                    </div>
-                    </div>
-                    
+
                     <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-inner-button">
                       Записаться на съемку
-                    </a> 
+                    </a>
                   </div>
-                  
-                    <!-- Slider main container -->
-                    <div class="swiper mySwiper swiperFormats">
-                      <!-- Additional required wrapper -->
-                      <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/1.jpeg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/2.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/3.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/4.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/5.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/6.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/7.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/8.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/9.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                          <img src="./src/img/slider/catalog/10.jpg" alt="photo">
-                        </div>
+
+                  <!-- Slider main container -->
+                  <div class="swiper mySwiper swiperFormats">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/1.jpeg" alt="photo">
                       </div>
-                      <!-- If we need pagination -->
-                      <!-- <div class="swiper-pagination"></div> -->
-                  
-                      <!-- If we need navigation buttons -->
-                      <div class="swiper-button-prev prev"></div>
-                      <div class="swiper-button-next next"></div>
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/2.jpg" alt="photo">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/3.jpg" alt="photo">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/4.jpg" alt="photo">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/5.jpg" alt="photo">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/6.jpg" alt="photo">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/7.jpg" alt="photo">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/8.jpg" alt="photo">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/9.jpg" alt="photo">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./src/img/slider/catalog/10.jpg" alt="photo">
+                      </div>
                     </div>
-                    <!-- END Slider main container -->
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev prev"></div>
+                    <div class="swiper-button-next next"></div>
+                  </div>
+                  <!-- END Slider main container -->
 
                   <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-outer-button">
                     Записаться на съемку
-                  </a> 
+                  </a>
                 </div>
                 <!-- End popup content -->
             </section>
@@ -310,8 +405,8 @@
                   </button>
                 </div>
 
-               <!-- Start popup content -->
-               <div class="popup_content">
+                <!-- Start popup content -->
+                <div class="popup_content">
                   <div class="popup_first-column">
                     <div class="popup_text">
                       <div class="block_title">
@@ -320,8 +415,8 @@
                       <div class="popup_descriprion">
                         <p>
                           Имиджевые съемки — <span class="bold">это не просто красивая
-                          фотография, а полноценный инструмент, позволяющий сформировать
-                          образ продукции и коллекции на визуальном уровне.</span>
+                            фотография, а полноценный инструмент, позволяющий сформировать
+                            образ продукции и коллекции на визуальном уровне.</span>
                           Такие кадры доносят настроение и эмоции до покупателя.
                         </p>
                       </div>
@@ -330,7 +425,7 @@
 
                     <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-inner-button">
                       Записаться на съемку
-                    </a>   
+                    </a>
                   </div>
                   <!-- End popup_first-column -->
 
@@ -380,7 +475,7 @@
 
                   <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-outer-button">
                     Записаться на съемку
-                  </a>                 
+                  </a>
                 </div>
                 <!-- End popup content -->
             </section>
@@ -401,7 +496,7 @@
               </section>
               <button class="button-full format-btn">Подробнее</button>
             </section>
-          
+
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
@@ -410,7 +505,7 @@
                     <span></span><span></span>
                   </button>
                 </div>
-          
+
                 <!-- Start popup content -->
                 <div class="popup_content">
                   <div class="popup_first-column">
@@ -418,7 +513,7 @@
                       <div class="block_title">
                         <h1>УЛИЧНАЯ СЪЕМКА</h1>
                       </div>
-          
+
                       <div class="popup_descriprion">
                         <p>
                           Streetstyle – это разновидность имиджевой съемки,
@@ -431,16 +526,16 @@
                         </p>
                       </div>
                       <!-- End popup_descriprion -->
-          
+
                     </div>
                     <!-- End popup_text -->
-          
+
                     <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-inner-button">
                       Записаться на съемку
                     </a>
                   </div>
                   <!-- End popup_first-column -->
-          
+
                   <!-- Slider main container -->
                   <div class="swiper mySwiper swiperFormats">
                     <!-- Additional required wrapper -->
@@ -479,13 +574,13 @@
                     </div>
                     <!-- If we need pagination -->
                     <!-- <div class="swiper-pagination"></div> -->
-          
+
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
                     <div class="swiper-button-next next"></div>
                   </div>
                   <!-- END Slider main container -->
-          
+
                   <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-outer-button">
                     Записаться на съемку
                   </a>
@@ -509,7 +604,7 @@
               </section>
               <button class="button-full format-btn">Подробнее</button>
             </section>
-          
+
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
@@ -525,7 +620,7 @@
                       <div class="block_title">
                         <h1>Индивидуальная</h1>
                       </div>
-          
+
                       <div class="popup_descriprion">
                         <p>
                           Если у Вас специфический запрос, который не укладывается в
@@ -542,7 +637,7 @@
                     </a>
                   </div>
                   <!-- End popup_first-column -->
-          
+
                   <!-- Slider main container -->
                   <div class="swiper mySwiper swiperFormats">
                     <!-- Additional required wrapper -->
@@ -581,13 +676,13 @@
                     </div>
                     <!-- If we need pagination -->
                     <!-- <div class="swiper-pagination"></div> -->
-          
+
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
                     <div class="swiper-button-next next"></div>
                   </div>
                   <!-- END Slider main container -->
-          
+
                   <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-outer-button">
                     Записаться на съемку
                   </a>
@@ -611,7 +706,7 @@
               </section>
               <button class="button-full format-btn">Подробнее</button>
             </section>
-          
+
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
@@ -620,7 +715,7 @@
                     <span></span><span></span>
                   </button>
                 </div>
-          
+
                 <!-- Start popup content -->
                 <div class="popup_content">
                   <div class="popup_first-column">
@@ -628,7 +723,7 @@
                       <div class="block_title">
                         <h1>Видеопроходка</h1>
                       </div>
-          
+
                       <div class="popup_descriprion">
                         <p>
                           Видеопроходка – короткое видео на 15-20 секунд,
@@ -639,16 +734,16 @@
                         </p>
                       </div>
                       <!-- End popup_descriprion -->
-          
+
                     </div>
                     <!-- End popup_text -->
-          
+
                     <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-inner-button">
                       Записаться на съемку
                     </a>
                   </div>
                   <!-- End popup_first-column -->
-          
+
                   <!-- Slider main container -->
                   <div class="swiper mySwiper swiperFormats">
                     <!-- Additional required wrapper -->
@@ -687,13 +782,13 @@
                     </div>
                     <!-- If we need pagination -->
                     <!-- <div class="swiper-pagination"></div> -->
-          
+
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
                     <div class="swiper-button-next next"></div>
                   </div>
                   <!-- END Slider main container -->
-          
+
                   <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-outer-button">
                     Записаться на съемку
                   </a>
@@ -717,7 +812,7 @@
               </section>
               <button class="button-full format-btn">Подробнее</button>
             </section>
-          
+
             <!-- Start popup block -->
             <section class="popup container">
               <div class="popup__block inner__container dark">
@@ -726,7 +821,7 @@
                     <span></span><span></span>
                   </button>
                 </div>
-          
+
                 <!-- Start popup content -->
                 <div class="popup_content">
                   <div class="popup_first-column">
@@ -734,7 +829,7 @@
                       <div class="block_title">
                         <h1>Reels</h1>
                       </div>
-          
+
                       <div class="popup_descriprion">
                         <p>
                           Рилс (Reels) — это формат коротких видео для Инстаграм.
@@ -743,16 +838,16 @@
                         </p>
                       </div>
                       <!-- End popup_descriprion -->
-          
+
                     </div>
                     <!-- End popup_text -->
-          
+
                     <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-inner-button">
                       Записаться на съемку
                     </a>
                   </div>
                   <!-- End popup_first-column -->
-          
+
                   <!-- Slider main container -->
                   <div class="swiper mySwiper swiperFormats">
                     <!-- Additional required wrapper -->
@@ -791,13 +886,13 @@
                     </div>
                     <!-- If we need pagination -->
                     <!-- <div class="swiper-pagination"></div> -->
-          
+
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
                     <div class="swiper-button-next next"></div>
                   </div>
                   <!-- END Slider main container -->
-          
+
                   <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-outer-button">
                     Записаться на съемку
                   </a>
@@ -1403,8 +1498,8 @@
     <section class="up_wrapper">
       <a href="#" class="button-up button-full topHide">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 15L12 7L20 15" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>          
+          <path d="M4 15L12 7L20 15" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
       </a>
     </section>
   </main>

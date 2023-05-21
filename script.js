@@ -229,6 +229,122 @@ btnTop.addEventListener('click', (e) => {
   document.querySelector('#top').scrollIntoView();
 })
 
+
+//Обработка формы
+const promoForm = document.querySelector('.promo_form');
+const promoSubmit = document.querySelector('.promo-btn');
+const loader = document.querySelector('.spinner__wrapper')
+
+
+promoForm.addEventListener('submit', promoSend)
+
+promoSubmit.addEventListener('click', promoSend)
+
+
+async function promoSend(e) {
+  e.preventDefault();
+  let error = formValidate(promoForm);
+
+  let formData = new FormData(promoForm);
+  formData.append('image', formImage.files[0]);
+
+  if (error) {
+    alert('Заполните все обязательные поля')
+  }
+  else {
+    // loader.classList.toggle('hide');
+    promoForm.classList.add('_sending');
+    // send form
+    let response = await fetch('sendmail.php', {
+      method: 'POST',
+      body: formData
+    });
+    if(response.ok) {
+      let result = await response.json();
+      alert(result.message);
+      filePreview.innerHTML = '';
+      form.reset();
+      promoForm.classList.remove('_sending');
+      // loader.classList.toggle('hide');
+    }
+    else {
+      alert('Ошибка отправки, повторите попытку позже');
+      promoForm.classList.remove('_sending');
+    }
+  }
+}
+
+function formValidate(form) {
+  let error = 0;
+  let formReq = document.querySelectorAll('._req')
+
+  for (let i = 0; i < formReq.length; i++) {
+    const input = formReq[i];
+
+    if(input.classList.contains('_email')){
+      if(emailTest(input)) {
+        formAddError(input);
+        error++;
+      }
+    }
+    else {
+      if (input.value === '') {
+        formAddError(input);
+        error++;
+      }
+    }
+  }
+  return error;
+}
+
+function formAddError(input) {
+  input.parentElement.classList.add('_error')
+  input.classList.add('_error')
+}
+
+function formRemoveError(input) {
+  input.parentElement.classList.remove('_error')
+  input.classList.remove('_error')
+}
+
+//валидация почты
+function emailTest(input){
+  return  !/ˆ\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+
+// Обработка загрузки файлов
+const formImage = document.querySelector('#formImage');
+const filePreview = document.querySelector('#filePreview');
+
+formImage.addEventListener('change', () => {
+  uploadFile(formImage.files[0]);
+});
+
+function uploadFile(file) {
+  // check type
+  if(!['image/jpeg', 'image/png', 'image/gif', 'image/jpg'].includes(file.type)) {
+    alert('Разрешены только изображения');
+    formImage.value = '';
+    return;
+  }
+  //check size (<2Mb)
+  if(file.size > 2 * 1024 * 1024) {
+    alert('Файл должен быть менее 2 МБ');
+    return;
+  }
+
+  let reader = new FileReader();
+  reader.onload = function(e) {
+    filePreview.innerHTML = `<img src='${e.target.result}' alt='фото'>`;
+  };
+  reader.onerror = function(e) {
+    alert('Ошибка загрузки');
+  };
+  reader.readAsDataURL(file);
+
+}
+
+
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 //   if (window.innerWidth <= 668) {
 //     burgerBtn.addEventListener('touched', () => hideAll())
@@ -288,3 +404,4 @@ btnTop.addEventListener('click', (e) => {
 
 //   mousewhell: true,
 // });
+
