@@ -232,13 +232,11 @@ btnTop.addEventListener('click', (e) => {
 
 //Обработка формы
 const promoForm = document.querySelector('.promo_form');
-const promoSubmit = document.querySelector('.promo-btn');
+const promoSubmit = document.querySelector('.promo-submit');
 const loader = document.querySelector('.spinner__wrapper')
 
 
 promoForm.addEventListener('submit', promoSend)
-
-promoSubmit.addEventListener('click', promoSend)
 
 
 async function promoSend(e) {
