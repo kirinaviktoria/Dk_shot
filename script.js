@@ -219,7 +219,8 @@ window.onscroll = () => {
   if(window.scrollY > 700) {
     btnTop.classList.remove('topHide')
   } 
-  else if (window.scrollY < 700 || popup.classList.сontains('visible')) {
+  // || popup.classList.сontains('visible')
+  else if (window.scrollY < 700) {
     btnTop.classList.add('topHide')
   }
 }
@@ -235,20 +236,19 @@ const promoForm = document.querySelector('.promo_form');
 const promoSubmit = document.querySelector('.promo-submit');
 const loader = document.querySelector('.spinner__wrapper')
 
-
 promoForm.addEventListener('submit', promoSend)
-
 
 async function promoSend(e) {
   e.preventDefault();
   let error = formValidate(promoForm);
 
   let formData = new FormData(promoForm);
-  formData.append('image', formImage.files[0]);
+  // formData.append('image', formImage.files[0]);
 
   if (error) {
     alert('Заполните все обязательные поля')
   }
+
   else {
     // loader.classList.toggle('hide');
     promoForm.classList.add('_sending');
@@ -260,8 +260,7 @@ async function promoSend(e) {
     if(response.ok) {
       let result = await response.json();
       alert(result.message);
-      filePreview.innerHTML = '';
-      form.reset();
+      promoForm.reset();
       promoForm.classList.remove('_sending');
       // loader.classList.toggle('hide');
     }
@@ -284,11 +283,19 @@ function formValidate(form) {
         formAddError(input);
         error++;
       }
+      else {
+        formRemoveError(input);
+        error = 0;
+      }
     }
     else {
       if (input.value === '') {
         formAddError(input);
         error++;
+      }
+      else {
+        formRemoveError(input);
+        error = 0;
       }
     }
   }
@@ -311,36 +318,36 @@ function emailTest(input){
 }
 
 // Обработка загрузки файлов
-const formImage = document.querySelector('#formImage');
-const filePreview = document.querySelector('#filePreview');
+// const formImage = document.querySelector('#formImage');
+// const filePreview = document.querySelector('#filePreview');
 
-formImage.addEventListener('change', () => {
-  uploadFile(formImage.files[0]);
-});
+// formImage.addEventListener('change', () => {
+//   uploadFile(formImage.files[0]);
+// });
 
-function uploadFile(file) {
-  // check type
-  if(!['image/jpeg', 'image/png', 'image/gif', 'image/jpg'].includes(file.type)) {
-    alert('Разрешены только изображения');
-    formImage.value = '';
-    return;
-  }
-  //check size (<2Mb)
-  if(file.size > 2 * 1024 * 1024) {
-    alert('Файл должен быть менее 2 МБ');
-    return;
-  }
+// function uploadFile(file) {
+//   // check type
+//   if(!['image/jpeg', 'image/png', 'image/gif', 'image/jpg'].includes(file.type)) {
+//     alert('Разрешены только изображения');
+//     formImage.value = '';
+//     return;
+//   }
+//   //check size (<2Mb)
+//   if(file.size > 2 * 1024 * 1024) {
+//     alert('Файл должен быть менее 2 МБ');
+//     return;
+//   }
 
-  let reader = new FileReader();
-  reader.onload = function(e) {
-    filePreview.innerHTML = `<img src='${e.target.result}' alt='фото'>`;
-  };
-  reader.onerror = function(e) {
-    alert('Ошибка загрузки');
-  };
-  reader.readAsDataURL(file);
+//   let reader = new FileReader();
+//   reader.onload = function(e) {
+//     filePreview.innerHTML = `<img src='${e.target.result}' alt='фото'>`;
+//   };
+//   reader.onerror = function(e) {
+//     alert('Ошибка загрузки');
+//   };
+//   reader.readAsDataURL(file);
 
-}
+// }
 
 
 // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
