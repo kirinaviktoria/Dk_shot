@@ -18,12 +18,14 @@ const closePopup = document.querySelector('.close_popup');
 promoBtn.addEventListener('click', function() {
   promoPopup.classList.toggle('visible');
   body.classList.toggle('scroll-hidden');
+  // body.classList.toggle('fixed');
   btnTop.classList.toggle('topHide');
 })
 
 closePopup.addEventListener('click', () => {
   promoPopup.classList.toggle('visible');
   body.classList.toggle('scroll-hidden');
+  // body.classList.toggle('fixed');
   btnTop.classList.toggle('topHide');
 });
 
@@ -45,6 +47,7 @@ const toggleMobile = () => {
   headerBlock.classList.toggle('open');
   header.classList.toggle('open');
   body.classList.toggle('scroll-hidden');
+  body.classList.toggle('fixed');
   hero.classList.toggle('hero-open');
   // body.classList.toggle('hero-open')
   myBlur.classList.toggle('hide');
@@ -69,6 +72,7 @@ const toggleTablet = () => {
   headerBlock.classList.toggle('open');
   myBlur.classList.toggle('hide')
   body.classList.toggle('scroll-hidden');
+  body.classList.toggle('fixed');
   hero.classList.toggle('hero-open');
   // body.classList.toggle('hero-open')
 }
@@ -77,6 +81,7 @@ const hideAll = () => {
   headerBlock.classList.toggle('open');
   header.classList.toggle('open');
   body.classList.toggle('scroll-hidden');
+  body.classList.toggle('fixed');
 
   // containers.forEach((item) => {
   //   item.classList.toggle('hide');
@@ -138,6 +143,7 @@ document.querySelectorAll('.format').forEach(function(formats) {
   formatsBtn.addEventListener('click', () => {
     popup.classList.toggle('visible');
     body.classList.toggle('scroll-hidden');
+    // body.classList.toggle('fixed');
     btnTop.classList.toggle('topHide');
     // upWrapper.classList.toggle('hide')
   });
@@ -145,6 +151,7 @@ document.querySelectorAll('.format').forEach(function(formats) {
   closePopup.addEventListener('click', () => {
     popup.classList.toggle('visible');
     body.classList.toggle('scroll-hidden');
+    // body.classList.toggle('fixed');
     btnTop.classList.toggle('topHide');
     // upWrapper.classList.toggle('hide')
   });
@@ -153,6 +160,7 @@ document.querySelectorAll('.format').forEach(function(formats) {
     if (e.key === 'Escape') {
       popup.classList.remove('visible');
       body.classList.toggle('scroll-hidden');
+      // body.classList.toggle('fixed');
       btnTop.classList.toggle('topHide');
       // upWrapper.classList.toggle('hide')
     }
@@ -169,6 +177,7 @@ document.querySelectorAll('.format').forEach(function(formats) {
     if (e.isClickOutOfPopup) return;
     e.currentTarget.classList.remove('visible');
     body.classList.toggle('scroll-hidden');
+    // body.classList.toggle('fixed');
     btnTop.classList.toggle('topHide');
     // upWrapper.classList.toggle('hide')
   })
@@ -213,23 +222,6 @@ const models_swiper = new Swiper('.modelsSwiper', {
 
   mousewhell: true,
 });
-
-// button top
-window.onscroll = () => {
-  if(window.scrollY > 700) {
-    btnTop.classList.remove('topHide')
-  } 
-  // || popup.classList.сontains('visible')
-  else if (window.scrollY < 700) {
-    btnTop.classList.add('topHide')
-  }
-}
-
-btnTop.addEventListener('click', (e) => {
-  // Плавная прокрутка до элемента с id = href у ссылки
-  document.querySelector('#top').scrollIntoView();
-})
-
 
 //Обработка формы
 const promoForm = document.querySelector('.promo_form');
@@ -317,6 +309,21 @@ function emailTest(input){
   return  !/ˆ\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
 
+// button top
+window.onscroll = () => {
+  if(window.scrollY > 700) {
+    btnTop.classList.remove('topHide')
+  } 
+  // || popup.classList.сontains('visible')
+  else if (window.scrollY < 700) {
+    btnTop.classList.add('topHide')
+  }
+}
+
+btnTop.addEventListener('click', (e) => {
+  // Плавная прокрутка до элемента с id = href у ссылки
+  document.querySelector('#top').scrollIntoView();
+})
 // Обработка загрузки файлов
 // const formImage = document.querySelector('#formImage');
 // const filePreview = document.querySelector('#filePreview');
