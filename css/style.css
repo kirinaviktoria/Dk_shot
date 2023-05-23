@@ -236,7 +236,7 @@ header {
 
 .navLogo {
   object-fit: contain;
-  max-height: 80px;
+  max-height: 75px;
   height: 100%;
   width: 100%;
 }
