@@ -712,7 +712,7 @@
   }
 
   .about {
-    padding: 0 60px;
+    /* padding: 0 60px; */
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
   }
@@ -810,8 +810,8 @@
 /* Very big monitors */
 @media screen and (min-width: 1440px) {
   .container {
-    padding-left: 100px;
-    padding-right: 100px;
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
   }
 
   header {
@@ -824,25 +824,20 @@
   }
 
   .faq {
-    padding-left: 200px;
-    padding-right: 200px;
+    /* padding-left: 200px; */
+    /* padding-right: 200px; */
   }
 
 }
 
 @media screen and (min-width: 1600px) {
   .container {
-    padding-left: 300px;
-    padding-right: 300px;
+    /* padding-left: 300px; */
+    /* padding-right: 300px; */
   }
 
   .block_title h1 {
     font-size: 34px;
-  }
-
-  #models {
-    padding-left: 100px;
-    padding-right: 100px;
   }
 
   header {
@@ -901,3 +896,30 @@
   } */
 }
 
+@media screen and (max-width: 645px) {
+  .hero { 
+    background-image: url('../src/img/hero/hero-main.jpg');
+  }
+
+}
+
+@media screen and (min-width: 645px) {
+  .hero { 
+    background-image: url('../src/img/hero/hero1.jpg');
+  }
+
+}
+
+@media screen and (min-width: 880px) {
+  .hero { 
+    background-image: url('../src/img/hero/hero-2-1.jpg');
+  }
+
+}
+
+@media screen and (min-width: 1170px) {
+  .hero { 
+    background-image: url('../src/img/hero/hero-3-11.jpg');
+  }
+
+}
