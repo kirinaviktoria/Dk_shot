@@ -14,20 +14,7 @@ const promoPopup = document.querySelector('.promo-popup');
 const closePopup = document.querySelector('.close_popup');
 
 
-//promoPopup
-promoBtn.addEventListener('click', function() {
-  promoPopup.classList.toggle('visible');
-  body.classList.toggle('scroll-hidden');
-  // body.classList.toggle('fixed');
-  btnTop.classList.toggle('topHide');
-})
 
-closePopup.addEventListener('click', () => {
-  promoPopup.classList.toggle('visible');
-  body.classList.toggle('scroll-hidden');
-  // body.classList.toggle('fixed');
-  btnTop.classList.toggle('topHide');
-});
 
 window.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
@@ -224,18 +211,32 @@ const models_swiper = new Swiper('.modelsSwiper', {
 });
 
 //Обработка формы
-const promoForm = document.querySelector('.promo_form');
+const promoForm = document.querySelector('#promo-form');
 const promoSubmit = document.querySelector('.promo-submit');
-const loader = document.querySelector('.spinner__wrapper')
+const loader = document.querySelector('.spinner__wrapper');
+const formTitle = document.querySelector('.form__title');
+
+const formSended = document.querySelector('.form_sended');
+const idApp = document.querySelector('#idApp')
+const closeFormSended = document.querySelector('.close_formSended');
+
+//promoPopup open
+promoBtn.addEventListener('click', () => togglePopup());
+
+//promoPopup close
+closePopup.addEventListener('click', () => {
+  togglePopup();
+  toggleForm();
+});
 
 promoForm.addEventListener('submit', promoSend)
 
 async function promoSend(e) {
+  // toggleForm();
   e.preventDefault();
   let error = formValidate(promoForm);
 
   let formData = new FormData(promoForm);
-  // formData.append('image', formImage.files[0]);
 
   if (error) {
     alert('Заполните все обязательные поля')
@@ -247,14 +248,17 @@ async function promoSend(e) {
     // send form
     let response = await fetch('sendmail.php', {
       method: 'POST',
-      body: formData
+      body: formData,
     });
+
     if(response.ok) {
       let result = await response.json();
-      alert(result.message);
+      // alert(result.message);
       promoForm.reset();
       promoForm.classList.remove('_sending');
+      toggleForm();
       // loader.classList.toggle('hide');
+      console.log(randID());
     }
     else {
       alert('Ошибка отправки, повторите попытку позже');
@@ -263,7 +267,19 @@ async function promoSend(e) {
   }
 }
 
-function formValidate(form) {
+const togglePopup = () => {
+  promoPopup.classList.toggle('visible');
+  body.classList.toggle('scroll-hidden');
+  btnTop.classList.toggle('topHide');
+}
+
+const toggleForm = () => {
+  formTitle.classList.toggle('hide');
+  promoForm.classList.toggle('hide');
+  formSended.classList.toggle('hide');
+}
+
+function formValidate(promoForm) {
   let error = 0;
   let formReq = document.querySelectorAll('._req')
 

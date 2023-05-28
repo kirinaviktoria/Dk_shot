@@ -31,7 +31,7 @@
         <!-- Start logo block in header -->
         <section class="header__block-logo">
           <a href="#top" class="navLogo">
-            <img src="src/img/logo-light.svg" alt="logo" class="navLogo img-logo">
+            <img src="src/img/logo_white1.svg" alt="logo" class="navLogo img-logo">
           </a>
         </section>
         <!-- End logo block in header -->
@@ -169,15 +169,16 @@
             <!-- Start popup content -->
             <div class="promo-popup-content flex-col-20">
     
-              <form action="#" class="promo_form flex-col-20">
+              <form action="#" name="form" method="POST" class="promo_form flex-col-20" id="promo-form">
+
                 <div class="promo_form_controls flex-col-20">
                   <div class="form_column flex-col-20">
                     <!-- ФИО -->
-                    <input type="text" name="name" class="form-control _req" placeholder="ФИО*"></input>
+                    <input type="text" name="name" id="name" class="form-control _req" placeholder="ФИО*"></input>
                     <!-- телефон -->
-                    <input type="tel" name="phone" class="form-control _req _phone" placeholder="Телефон*"></input>
+                    <input type="tel" name="phone" id="phone" class="form-control _req _phone" placeholder="Телефон*"></input>
                     <!-- email -->
-                    <input type="email" name="email" class="form-control _email" placeholder="e-mail"></input>
+                    <input type="email" name="email" id="email" class="form-control _email" placeholder="e-mail"></input>
     
                     <!-- Описание съемки -->
                     <div class="form__item">
@@ -211,26 +212,26 @@
                       <!-- видеопроходка -->
                       <div class="form__item">
                         <div class="checkbox">
-                          <input type="checkbox" name="walking" id="Walking" value="видеопроходка нужна"
+                          <input type="checkbox" name="walking" id="walking" value="Yes"
                             class="checkbox__input">
-                          <label for="Walking" class="form__label checkbox__label">Нужна видеопроходка</label>
+                          <label for="walking" class="form__label checkbox__label">Нужна видеопроходка</label>
                         </div>
                       </div>
     
                       <!-- рилс -->
                       <div class="form__item">
                         <div class="checkbox">
-                          <input type="checkbox" name="reels" id="Reels" value="нужен рилс" class="checkbox__input">
-                          <label for="Reels" class="form__label checkbox__label">Нужен Рилс</label>
+                          <input type="checkbox" name="reels" id="reels" value="Yes" class="checkbox__input">
+                          <label for="reels" class="form__label checkbox__label">Нужен Рилс</label>
                         </div>
                       </div>
     
                       <!-- стилизация -->
                       <div class="form__item">
                         <div class="checkbox">
-                          <input type="checkbox" name="styling" id="Styling" value="нужна стилизация"
+                          <input type="checkbox" name="styling" id="styling" value="Yes"
                             class="checkbox__input">
-                          <label for="Styling" class="form__label checkbox__label">Нужна стилизация образа (подбор доп.
+                          <label for="styling" class="form__label checkbox__label">Нужна стилизация образа (подбор доп.
                             одежды)</label>
                         </div>
                       </div>
@@ -276,10 +277,26 @@
                   <div class="spinner"></div>
                 </div>
               </form>
+
+              <!-- Form sended block -->
+              <section class="inner__container form_sended hide">
+                <div class="flex-col-20 form_sended_text">
+                  <div class="block_title">
+                    <h1 class="form__title">Заявка отправлена</h1>
+                  </div>
+              
+                  <div class="announce_text form_sended_inner">
+                    Спасибо за заявку, менеджер свяжется с Вами в ближайщее время
+                  </div>
+                </div>
+                
+                <!-- <button class="button-frame close_formSended">Закрыть</button> -->
+              </section>
+              <!-- END Form sended block -->
             </div>
-            <!-- End promo-popup-content -->
+            <!-- END promo-popup-content -->
         </section>
-        <!-- End promo-popup block -->
+        <!-- END promo-popup block -->
       </section>
       <!-- END inner__container -->
     </section>
@@ -1365,17 +1382,21 @@
               </section>
 
               <section class="faq-answer hide">
-                <p>На каждый артикул:</p>
-                <ul>
-                  <li>– все исходники (25-30 кадров)</li>
-                  <li>– 4 кадра в ретуши</li>
-                  <li>– видеопроходку</li>
-                  <li>– reels</li>
-                  <li>– backstage</li><br />
-                  <li>*Фотографии на ретушь Вы отбираете самостоятельно</li>
-                </ul>
+                <div class="answer_content">
+                  <p>На каждый артикул:</p>
+                  <ul>
+                    <li>– все исходники (25-30 кадров)</li>
+                    <li>– 4 кадра в ретуши</li>
+                    <li>– видеопроходку</li>
+                    <li>– reels</li>
+                    <li>– backstage</li><br />
+                    <li>*Фотографии на ретушь Вы отбираете самостоятельно</li>
+                  </ul>
+              
+                </div>
+              
               </section>
-            </section>
+              </section>
 
             <!-- Карточка 1 вопроса -->
             <section class="text_elem" id="faq-elem">
@@ -1398,7 +1419,7 @@
               </section>
 
               <section class="faq-answer hide">
-                <ul>
+                <ul class="answer_content">
                   <li>– исходники – 2-3 дня</li>
                   <li>– ретушь – 3-4 дня</li>
                 </ul>
@@ -1426,7 +1447,7 @@
               </section>
 
               <section class="faq-answer hide">
-                <ul>
+                <ul class="answer_content">
                   <li>– работаем от 1го артикула</li>
                   <li>– выдаём все исходники</li>
                   <li>– профессионально ретушируем</li>
@@ -1459,7 +1480,7 @@
           </section>
 
           <section class="contacts-elem">
-            Свежая информация о предстоящих съмках - в
+            Свежая информация о предстоящих съемках - в
             нашем <a href="#">Телеграм-канале</a>
           </section>
 
