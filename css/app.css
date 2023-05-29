@@ -530,6 +530,11 @@ header {
   position: relative;
 }
 
+.hero-buttons .button-full {
+  padding: 15px;
+  font-size: 24px;
+}
+
 .bigtext {
   text-transform: uppercase;
 }
@@ -1252,7 +1257,7 @@ header {
   padding: 0 30px;
 
   /* !!test */
-  height: 100%;
+  /* height: fit-content; */
 }
 
 /* Promo form */

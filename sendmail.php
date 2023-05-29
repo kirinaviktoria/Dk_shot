@@ -14,7 +14,10 @@
   // from:
   $mail->setFrom('info@dkshot.ru', 'DK shot');
   // to:
-  $mail->addAddress('kirinaviktoria@yandex.ru');
+  $mail->addBCC('info@dkshot.ru');
+  $mail->addAddress('kate@dkshot.ru');
+  $mail->addBCC('kirinaviktoria@yandex.ru');
+  // $mail->addAddress('kirinaviktoria@yandex.ru');
   // $mail->addAddress('info@dkshot.ru');
   // theme mail
   $mail->Subject = 'Заявка с сайта DK shot';

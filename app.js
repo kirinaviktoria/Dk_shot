@@ -14,8 +14,6 @@ const promoPopup = document.querySelector('.promo-popup');
 const closePopup = document.querySelector('.close_popup');
 
 
-
-
 window.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     promoPopup.classList.remove('visible');
