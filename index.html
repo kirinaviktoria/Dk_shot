@@ -878,39 +878,45 @@
                   <!-- End popup_first-column -->
 
                   <!-- Slider main container -->
-                  <div class="swiper mySwiper swiperFormats">
+                  <div class="swiper mySwiper swiperFormats swiperVideo" id="swiperVideo">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                       <!-- Slides -->
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/1.jpeg" alt="photo">
+                      <div class="swiper-slide video-slide">
+                        <video class="lazy" muted controls 
+                        src="./src/video/reels/IMG_7011.MOV">
+                          <source type="video/mp4"
+                          src="./src/video/reels/IMG_7011.MOV">
+                        </video>
                       </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/2.jpg" alt="photo">
+                      <div class="swiper-slide video-slide">
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/CnsHKAYLbZE" 
+                          title="YouTube video player" 
+                          frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          allowfullscreen>
+                        </iframe> -->
+                        <video id="lazyTest" class="lazy" muted controls 
+                          src="./src/video/reels/IMG_7012.MOV">
+                          <source type="video/mp4"
+                          src="./src/video/reels/IMG_7012.MOV">
+                        </video>
                       </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/3.jpg" alt="photo">
+                      <div class="swiper-slide video-slide">
+                        <!-- <img src="./src/img/slider/catalog/3.jpg" alt="photo"> -->
+                        <video id="lazyTest" class="lazy" muted controls 
+                        src="./src/video/reels/IMG_7013.MOV">
+                        <source type="video/mp4"
+                        src="./src/video/reels/IMG_7013.MOV">
+                      </video>
                       </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/4.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/5.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/6.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/7.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/8.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/9.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/10.jpg" alt="photo">
+                      <div class="swiper-slide video-slide">
+                        <!-- <img src="./src/img/slider/catalog/4.jpg" alt="photo"> -->
+                        <video id="lazyTest" class="lazy" muted controls 
+                        src="./src/video/reels/IMG_7014.MOV">
+                        <source type="video/mp4"
+                        src="./src/video/reels/IMG_7014.MOV">
+                      </video>
                       </div>
                     </div>
                     <!-- If we need pagination -->
@@ -1526,8 +1532,7 @@
     </footer>
     <!-- End Footer -->
 
-
-
+    <!-- Button TOP -->
     <section class="up_wrapper">
       <a href="#" class="button-up button-full topHide">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1535,9 +1540,11 @@
         </svg>
       </a>
     </section>
+    <!-- END button TOP -->
+
   </main>
-  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- <script defer src="./swiper/swiper-bundle.min.js"></script> -->
+  <!-- <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script defer src="./swiper/swiper-bundle.min.js"></script>
   <script defer src="app.js?<?=rand()?>" type="text/javascript"></script>
   <!-- <script defer src="script.js"></script> -->
 </body>

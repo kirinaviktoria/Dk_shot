@@ -803,11 +803,14 @@ header {
   border-radius: 0 !important;
   /* add to mobile media */
   /* max-width: 345px !important; */
-  max-width: 385px;
+  /* max-width: 385px; */
+  max-width: 450px; 
   width: 100%;
   /* height: fit-content; */
   min-height: 450px;
   /* max-height: 650px; */
+  display: flex;
+  position: relative;
 }
 
 .swiperFormats .swiper-slide img {
@@ -815,6 +818,22 @@ header {
   /* object-fit: cover; */
   object-fit: contain;
 }
+
+.swiperVideo {
+  height: fit-content;
+  max-width: 385px;
+}
+
+.swiperVideo .swiper-slide {
+  background-size: contain;
+  /* height: auto; */
+}
+
+.swiperVideo .swiper-slide video{
+  object-fit: contain;
+  /* width: 100%; */
+}
+
 /* END POPUP */
 
 .scroll-hidden {
@@ -879,6 +898,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 0;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
 .swiper-slide img {
@@ -1175,14 +1199,6 @@ header {
 .swiper-wrapper {
   display: flex;
   align-items: stretch;
-}
-
-.swiper-slide {
-  min-width: 0;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit: cover;
 }
 
 .swiper-slide_models img {

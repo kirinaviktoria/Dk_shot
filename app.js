@@ -323,6 +323,47 @@ function emailTest(input){
   return  !/ˆ\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
 
+
+// swiperVideo
+const video_swiper = new Swiper('.swiperVideo', {
+  effect: 'slide',
+  loop: true,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  mousewhell: true,
+});
+
+// const video = document.querySelectorAll('.lazy');
+
+// const video = videoSlide.children[0];
+const videoSlide = document.querySelectorAll('.video-slide');
+
+video_swiper.on('slideChange', function() {
+  videoSlide.forEach(slide => {
+    if (slide.classList.contains('swiper-slide-active')) {
+      slide.children[0].play();
+    }
+    else {
+      slide.children[0].pause();
+      slide.children[0].currentTime = 0;
+    }
+  });
+
+  
+
+  
+
+  // video.forEach(video => {
+  //   video.pause();
+  //   video.currentTime = 0;
+  // });
+});
+
+
 // button top
 window.onscroll = () => {
   if(window.scrollY > 700) {
