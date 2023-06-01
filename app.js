@@ -219,12 +219,14 @@ const idApp = document.querySelector('#idApp')
 const closeFormSended = document.querySelector('.close_formSended');
 
 //promoPopup open
-promoBtn.addEventListener('click', () => togglePopup());
+promoBtn.addEventListener('click', () => {
+  togglePopup();
+  showForm();
+});
 
 //promoPopup close
 closePopup.addEventListener('click', () => {
   togglePopup();
-  toggleForm();
 });
 
 promoForm.addEventListener('submit', promoSend)
@@ -254,7 +256,8 @@ async function promoSend(e) {
       // alert(result.message);
       promoForm.reset();
       promoForm.classList.remove('_sending');
-      toggleForm();
+      hideForm();
+      // showSended();
       // loader.classList.toggle('hide');
       console.log(randID());
     }
@@ -266,16 +269,36 @@ async function promoSend(e) {
 }
 
 const togglePopup = () => {
+  // showForm();
   promoPopup.classList.toggle('visible');
   body.classList.toggle('scroll-hidden');
   btnTop.classList.toggle('topHide');
 }
 
-const toggleForm = () => {
-  formTitle.classList.toggle('hide');
-  promoForm.classList.toggle('hide');
-  formSended.classList.toggle('hide');
+const showForm = () => {
+  formTitle.classList.remove('hide');
+  promoForm.classList.remove('hide');
+  formSended.classList.add('hide');
 }
+
+const hideForm = () => {
+  formTitle.classList.add('hide');
+  promoForm.classList.add('hide');
+  formSended.classList.remove('hide');
+}
+
+// const toggleForm = () => {
+//   formTitle.classList.toggle('hide');
+//   promoForm.classList.toggle('hide');
+// }
+
+// const showSended = () => {
+//   formSended.classList.remove('hide');
+// }
+
+// const hideSended = () => {
+//   formSended.classList.add('hide');
+// }
 
 function formValidate(promoForm) {
   let error = 0;
@@ -347,20 +370,11 @@ video_swiper.on('slideChange', function() {
     if (slide.classList.contains('swiper-slide-active')) {
       slide.children[0].play();
     }
-    else {
+    else if (!slide.classList.contains('swiper-slide-active')){
       slide.children[0].pause();
       slide.children[0].currentTime = 0;
     }
   });
-
-  
-
-  
-
-  // video.forEach(video => {
-  //   video.pause();
-  //   video.currentTime = 0;
-  // });
 });
 
 
