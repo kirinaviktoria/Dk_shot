@@ -14,15 +14,14 @@
   // from:
   $mail->setFrom('info@dkshot.ru', 'DK shot');
   // to:
-  $mail->addBCC('info@dkshot.ru');
   $mail->addAddress('kate@dkshot.ru');
+  $mail->addBCC('info@dkshot.ru');
   $mail->addBCC('kirinaviktoria@yandex.ru');
-  // $mail->addAddress('kirinaviktoria@yandex.ru');
-  // $mail->addAddress('info@dkshot.ru');
+
   // theme mail
   $mail->Subject = 'Заявка с сайта DK shot';
 
-  $date_today = date("m.d.y"); //присвоено 12.03.15
+  $date_today = date("d.m.y"); //присвоено 12.03.15
   $today[1] = date("H:i:s"); //присвоит 1 элементу массива 18:32:17
   // echo("Текущее время: $today[1] и дата: $date_today .");
   $dateTime = "$date_today $today[1]";

@@ -837,6 +837,7 @@ header {
 .video-slide .lazy {
   object-fit: contain;
   /* width: 100%; */
+  max-width: 385px;
   height: 100%;
 }
 
