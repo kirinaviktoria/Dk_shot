@@ -822,6 +822,7 @@ header {
 .swiperVideo {
   height: fit-content;
   max-width: 385px;
+  border-radius: 0 !important;
 }
 
 .swiperVideo .swiper-slide {

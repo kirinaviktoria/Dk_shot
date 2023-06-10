@@ -143,165 +143,168 @@
     </div>
     <!-- End hero block -->
 
+
+    <!-- !!! -->
     <!-- START promo -->
-    <!-- <section class="container light">
+    <section class="container light">
       <section class="inner__container">
         <section class="block_title promo-text">
           <h1>Заполни заявку и получи скидку на первый заказ</h1>
-        </section> -->
+        </section>
     
-        <!-- <section class="promoBtn__wrapper">
+        <section class="promoBtn__wrapper">
           <button class="button-full bigtext promo-btn">Заполнить заявку</button>
-        </section> -->
+        </section>
+
+      </section>
+      <!-- END inner__container -->
+    </section>
+    <!-- END promo -->
+    <!-- !!! -->
     
-        <!-- START promo-popup block-->
-        <section class="popup container promo-popup">
-          <div class="popup__block inner__container dark promoPopup__inner">
-            <div class="popup__header promoPopup__header">
-              <button class="burger_btn close_popup">
-                <span></span><span></span>
-              </button>
-    
+    <!-- START promo-popup block-->
+    <section class="popup container promo-popup">
+      <div class="popup__block inner__container dark promoPopup__inner">
+        <div class="popup__header promoPopup__header">
+          <button class="burger_btn close_popup">
+            <span></span><span></span>
+          </button>
+
+          <div class="block_title">
+            <h1 class="form__title">Анкета предзаписи</h1>
+          </div>
+        </div>
+        <!-- Start popup content -->
+        <div class="promo-popup-content flex-col-20">
+
+          <form action="#" name="form" method="POST" class="promo_form flex-col-20" id="promo-form">
+
+            <div class="promo_form_controls flex-col-20">
+              <div class="form_column flex-col-20">
+                <!-- ФИО -->
+                <input type="text" name="name" id="name" class="form-control _req" placeholder="ФИО*"></input>
+                <!-- телефон -->
+                <input type="tel" name="phone" id="phone" class="form-control _req _phone" placeholder="Телефон*"></input>
+                <!-- email -->
+                <input type="email" name="email" id="email" class="form-control _email" placeholder="e-mail"></input>
+
+                <!-- Описание съемки -->
+                <div class="form__item">
+                  <label for="description" class="form__label">Что именно нужно отснять? (количество и описание
+                    позиций)*</label>
+                  <textarea name="description" id="description" class="form-control _req"></textarea>
+                </div>
+              </div>
+              <!-- END form_column  -->
+
+              <div class="form_column flex-col-20">
+                  <!-- фон -->
+                  <div class="form__item backgroug_item">
+                    <div class="form__label">Фон:</div>
+                    <select name="background" id="background" class="select">
+                      <option value="Интерьер" selected="selected">Интерьер</option>
+                      <option value="Белая стена">Белая стена + бетонный пол</option>
+                    </select>
+                  </div>
+
+                  <!-- формат -->
+                  <div class="form__item format_item">
+                    <div class="form__label">Формат:</div>
+                    <select name="format-select" id="format-select" class="select">
+                      <option value="Каталог" selected="selected">Каталог</option>
+                      <option value="Имиджевый лукбук">Имиджевый лукбук</option>
+                    </select>
+                  </div>
+
+                <div class="flex-col-20 checkbox_wrapper">
+                  <!-- видеопроходка -->
+                  <div class="form__item">
+                    <div class="checkbox">
+                      <input type="checkbox" name="walking" id="walking" value="Yes"
+                        class="checkbox__input">
+                      <label for="walking" class="form__label checkbox__label">Нужна видеопроходка</label>
+                    </div>
+                  </div>
+
+                  <!-- рилс -->
+                  <div class="form__item">
+                    <div class="checkbox">
+                      <input type="checkbox" name="reels" id="reels" value="Yes" class="checkbox__input">
+                      <label for="reels" class="form__label checkbox__label">Нужен Рилс</label>
+                    </div>
+                  </div>
+
+                  <!-- стилизация -->
+                  <div class="form__item">
+                    <div class="checkbox">
+                      <input type="checkbox" name="styling" id="styling" value="Yes"
+                        class="checkbox__input">
+                      <label for="styling" class="form__label checkbox__label">Нужна стилизация образа (подбор доп.
+                        одежды)</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- где связаться -->
+                <div class="form__item">
+                  <div class="form__label">Где с Вами связаться?</div>
+                  <div class="options">
+                    <div class="options__item">
+                      <input type="radio" checked name="messanger" id="tg" value="telegram" class="options_input">
+                      <label for="tg" class="form__label options_label"><span>Telegram</span></label>
+                    </div>
+
+                    <div class="options__item">
+                      <input type="radio" name="messanger" id="wa" value="WhatsApp" class="options_input">
+                      <label for="wa" class="form__label options_label"><span>WhatsApp</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END form_column  -->
+
+              <!-- 10. Можете загрузить референсы - позы/настроение/ракурсы -->
+              <!-- <div class="form__item">
+                    <div class="form__label">Можете загрузить референсы - позы/настроение/ракурсы</div>
+                    <div class="file">
+                      <div class="file__item">
+                        <input id="formImage" accept=".jpg, .jpeg, .png, .gif" type="file" name="refs" class="file__input">
+                        <button class="file__button button-full">Выбрать</button>
+                      </div>
+
+                      <div class="file__preview" id="filePreview">
+
+                      </div>
+                    </div>
+                  </div> -->
+            </div>
+
+            <button type="submit" class="button-full bigtext promo-submit">отправить</button>
+
+            <div class="spinner__wrapper">
+              <div class="spinner"></div>
+            </div>
+          </form>
+
+          <!-- Form sended block -->
+          <section class="inner__container form_sended hide">
+            <div class="flex-col-20 form_sended_text">
               <div class="block_title">
-                <h1 class="form__title">Анкета предзаписи</h1>
+                <h1 class="form__title">Заявка отправлена</h1>
+              </div>
+          
+              <div class="announce_text form_sended_inner">
+                Спасибо за заявку, менеджер свяжется с Вами в ближайщее время
               </div>
             </div>
-            <!-- Start popup content -->
-            <div class="promo-popup-content flex-col-20">
-    
-              <form action="#" name="form" method="POST" class="promo_form flex-col-20" id="promo-form">
-
-                <div class="promo_form_controls flex-col-20">
-                  <div class="form_column flex-col-20">
-                    <!-- ФИО -->
-                    <input type="text" name="name" id="name" class="form-control _req" placeholder="ФИО*"></input>
-                    <!-- телефон -->
-                    <input type="tel" name="phone" id="phone" class="form-control _req _phone" placeholder="Телефон*"></input>
-                    <!-- email -->
-                    <input type="email" name="email" id="email" class="form-control _email" placeholder="e-mail"></input>
-    
-                    <!-- Описание съемки -->
-                    <div class="form__item">
-                      <label for="description" class="form__label">Что именно нужно отснять? (количество и описание
-                        позиций)*</label>
-                      <textarea name="description" id="description" class="form-control _req"></textarea>
-                    </div>
-                  </div>
-                  <!-- END form_column  -->
-    
-                  <div class="form_column flex-col-20">
-                      <!-- фон -->
-                      <div class="form__item backgroug_item">
-                        <div class="form__label">Фон:</div>
-                        <select name="background" id="background" class="select">
-                          <option value="Интерьер" selected="selected">Интерьер</option>
-                          <option value="Белая стена">Белая стена + бетонный пол</option>
-                        </select>
-                      </div>
-    
-                      <!-- формат -->
-                      <div class="form__item format_item">
-                        <div class="form__label">Формат:</div>
-                        <select name="format-select" id="format-select" class="select">
-                          <option value="Каталог" selected="selected">Каталог</option>
-                          <option value="Имиджевый лукбук">Имиджевый лукбук</option>
-                        </select>
-                      </div>
-
-                    <div class="flex-col-20 checkbox_wrapper">
-                      <!-- видеопроходка -->
-                      <div class="form__item">
-                        <div class="checkbox">
-                          <input type="checkbox" name="walking" id="walking" value="Yes"
-                            class="checkbox__input">
-                          <label for="walking" class="form__label checkbox__label">Нужна видеопроходка</label>
-                        </div>
-                      </div>
-    
-                      <!-- рилс -->
-                      <div class="form__item">
-                        <div class="checkbox">
-                          <input type="checkbox" name="reels" id="reels" value="Yes" class="checkbox__input">
-                          <label for="reels" class="form__label checkbox__label">Нужен Рилс</label>
-                        </div>
-                      </div>
-    
-                      <!-- стилизация -->
-                      <div class="form__item">
-                        <div class="checkbox">
-                          <input type="checkbox" name="styling" id="styling" value="Yes"
-                            class="checkbox__input">
-                          <label for="styling" class="form__label checkbox__label">Нужна стилизация образа (подбор доп.
-                            одежды)</label>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- где связаться -->
-                    <div class="form__item">
-                      <div class="form__label">Где с Вами связаться?</div>
-                      <div class="options">
-                        <div class="options__item">
-                          <input type="radio" checked name="messanger" id="tg" value="telegram" class="options_input">
-                          <label for="tg" class="form__label options_label"><span>Telegram</span></label>
-                        </div>
-    
-                        <div class="options__item">
-                          <input type="radio" name="messanger" id="wa" value="WhatsApp" class="options_input">
-                          <label for="wa" class="form__label options_label"><span>WhatsApp</span></label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END form_column  -->
-    
-                  <!-- 10. Можете загрузить референсы - позы/настроение/ракурсы -->
-                  <!-- <div class="form__item">
-                        <div class="form__label">Можете загрузить референсы - позы/настроение/ракурсы</div>
-                        <div class="file">
-                          <div class="file__item">
-                            <input id="formImage" accept=".jpg, .jpeg, .png, .gif" type="file" name="refs" class="file__input">
-                            <button class="file__button button-full">Выбрать</button>
-                          </div>
-    
-                          <div class="file__preview" id="filePreview">
-    
-                          </div>
-                        </div>
-                      </div> -->
-                </div>
-    
-                <button type="submit" class="button-full bigtext promo-submit">отправить</button>
-    
-                <div class="spinner__wrapper">
-                  <div class="spinner"></div>
-                </div>
-              </form>
-
-              <!-- Form sended block -->
-              <section class="inner__container form_sended hide">
-                <div class="flex-col-20 form_sended_text">
-                  <div class="block_title">
-                    <h1 class="form__title">Заявка отправлена</h1>
-                  </div>
-              
-                  <div class="announce_text form_sended_inner">
-                    Спасибо за заявку, менеджер свяжется с Вами в ближайщее время
-                  </div>
-                </div>
-                
-                <!-- <button class="button-frame close_formSended">Закрыть</button> -->
-              </section>
-              <!-- END Form sended block -->
-            </div>
-            <!-- END promo-popup-content -->
-        </section>
-        <!-- END promo-popup block -->
-
-      <!-- </section> -->
-      <!-- END inner__container -->
-    <!-- </section> -->
-    <!-- END promo -->
+            
+            <!-- <button class="button-frame close_formSended">Закрыть</button> -->
+          </section>
+          <!-- END Form sended block -->
+        </div>
+        <!-- END promo-popup-content -->
+    </section>
+    <!-- END promo-popup block -->
 
     <!-- Start formats block -->
     <div class="container" id="formats">
@@ -775,49 +778,47 @@
                   <!-- End popup_first-column -->
 
                   <!-- Slider main container -->
-                  <div class="swiper mySwiper swiperFormats">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                      <!-- Slides -->
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/1.jpeg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/2.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/3.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/4.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/5.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/6.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/7.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/8.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/9.jpg" alt="photo">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./src/img/slider/catalog/10.jpg" alt="photo">
-                      </div>
+                  <div class="swiper mySwiper swiperVideo" id="swiperVideo">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide video-slide">
+                      <video class="lazy" muted controls playsinline
+                      src="./src/video/walk/compressed/IMG_7015.mp4">
+                        <source type="video/mp4"
+                        src="./src/video/walk/compressed/IMG_7015.mp4">
+                      </video>
                     </div>
-                    <!-- If we need pagination -->
-                    <!-- <div class="swiper-pagination"></div> -->
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev prev"></div>
-                    <div class="swiper-button-next next"></div>
+                    <div class="swiper-slide video-slide">
+                      <video id="lazyTest" class="lazy" muted controls playsinline
+                      poster="./src/video/covers/7016.jpg"
+                      src="./src/video/walk/compressed/IMG_7016.mp4">
+                      <source type="video/mp4"
+                      src="./src/video/walk/compressed/IMG_7016.mp4">
+                    </video>
+                    </div>
+                    <div class="swiper-slide video-slide">
+                      <video id="lazyTest" class="lazy" muted controls playsinline
+                        poster="./src/video/covers/7017.jpg"
+                        src="./src/video/walk/compressed/IMG_7017.mp4">
+                        <source type="video/mp4"
+                        src="./src/video/walk/compressed/IMG_7017.mp4">
+                      </video>
+                    </div>
+                    <div class="swiper-slide video-slide">
+                      <video id="lazyTest" class="lazy" muted controls playsinline
+                        poster="./src/video/covers/7018.jpg"
+                        src="./src/video/walk/compressed/IMG_7018.mp4">
+                        <source type="video/mp4"
+                        src="./src/video/walk/compressed/IMG_7018.mp4">
+                      </video>
+                    </div>
                   </div>
-                  <!-- END Slider main container -->
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev prev"></div>
+                  <div class="swiper-button-next next"></div>
+                </div>
+                <!-- END Slider main container -->
 
                   <a href="https://t.me/kate_kazanka" target="_blank" class="button-frame popup-outer-button">
                     Записаться на съемку
@@ -885,6 +886,7 @@
                       <!-- Slides -->
                       <div class="swiper-slide video-slide">
                         <video class="lazy" muted controls playsinline
+                        poster="./src/video/covers/7011.jpg"
                         src="./src/video/reels/compressed/IMG_7011.mp4">
                           <source type="video/mp4"
                           src="./src/video/reels/compressed/IMG_7011.mp4">
@@ -892,6 +894,7 @@
                       </div>
                       <div class="swiper-slide video-slide">
                         <video id="lazyTest" class="lazy" muted controls playsinline
+                        poster="./src/video/covers/7012.jpg"
                         src="./src/video/reels/compressed/IMG_7012.mp4">
                         <source type="video/mp4"
                         src="./src/video/reels/compressed/IMG_7012.mp4">
@@ -899,6 +902,7 @@
                       </div>
                       <div class="swiper-slide video-slide">
                         <video id="lazyTest" class="lazy" muted controls playsinline
+                        poster="./src/video/covers/7013.jpg"
                           src="./src/video/reels/compressed/IMG_7013.mp4">
                           <source type="video/mp4"
                           src="./src/video/reels/compressed/IMG_7013.mp4">
@@ -906,6 +910,7 @@
                       </div>
                       <div class="swiper-slide video-slide">
                         <video id="lazyTest" class="lazy" muted controls playsinline
+                        poster="./src/video/covers/7014.jpg"
                           src="./src/video/reels/compressed/IMG_7014.mp4">
                           <source type="video/mp4"
                           src="./src/video/reels/compressed/IMG_7014.mp4">
@@ -913,8 +918,6 @@
                       </div>
                       
                     </div>
-                    <!-- If we need pagination -->
-                    <!-- <div class="swiper-pagination"></div> -->
 
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev prev"></div>
