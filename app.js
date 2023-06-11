@@ -10,8 +10,11 @@ const body = document.querySelector('.body');
 const btnTop = document.querySelector('.button-up');
 // const upWrapper = document.querySelector('.up_wrapper');
 const promoBtn = document.querySelector('.promo-btn');
+const btnBanner = document.querySelector('#btn-banner');
 const promoPopup = document.querySelector('.promo-popup');
 const closePopup = document.querySelector('.close_popup');
+const promoWrapper = document.querySelector('.promo__wrapper');
+const closePromo = document.querySelector('.close_promo');
 
 
 window.addEventListener('keydown', e => {
@@ -221,6 +224,12 @@ const idApp = document.querySelector('#idApp')
 const closeFormSended = document.querySelector('.close_formSended');
 
 //promoPopup open
+btnBanner.addEventListener('click', () => {
+  togglePopup();
+  showForm();
+});
+
+//promoPopup open
 promoBtn.addEventListener('click', () => {
   togglePopup();
   showForm();
@@ -386,8 +395,37 @@ const video_swiper = new Swiper('.swiperVideo', {
   }
 });
 
+// Appearing promo banner
+// window.addEventListener('scroll', () => {
+//   let scrollTop = window.scrollY;
+//   let promoVisible = (hero.offsetHeight / 3) * 2;
+
+//   scrollTop >= promoVisible ? promoWrapper.classList.add('visible') : promoWrapper.classList.remove('visible');
+// });
+
+const promoAppear = () => {
+  let scrollTop = window.scrollY;
+  let promoVisible = hero.offsetHeight;
+  if(scrollTop >= promoVisible) {
+    promoWrapper.classList.add('visible')
+  } else {
+    promoWrapper.classList.remove('visible');
+  }
+}
+
+closePromo.addEventListener('click', () => {
+  promoWrapper.classList.add('closed');
+  promoWrapper.classList.remove('visible');
+})
+
+promoAppear();
+
 // button top
 window.onscroll = () => {
+  if(!promoWrapper.classList.contains('closed')){
+    promoAppear();
+  }
+  
   if(window.scrollY > 700) {
     btnTop.classList.remove('topHide')
   } 
@@ -397,7 +435,7 @@ window.onscroll = () => {
   }
 }
 
-btnTop.addEventListener('click', (e) => {
+btnTop.addEventListener('click', () => {
   // Плавная прокрутка до элемента с id = href у ссылки
   document.querySelector('#top').scrollIntoView();
 })

@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <meta name="description" content="Съемки для маркетплейсов Москва">
+  <meta name="keywords" content="wildberries, ozon, instagram, lamoda, съемка, маркетплейсы, бренд, одежда, сборная съемка, Москва, фотограф, контент, съемка для бренда, фотосессия">
+  <meta name="robots" content="none">
+  <meta name="Author" content="Viktoria Kirina">
+  <meta name="copyright" content="Viktoria Kirina">
+
+  <!-- локализация сайта, для русскоязычного сайта ru_RU -->
+  <meta property="og:locale" content="ru_RU">
+  <!-- тип контента, по умолчанию используется article -->
+  <meta property="og:type" content="article">
+  <!-- заголовок страницы, который будет выводится в записи социальной сети -->
+  <meta property="og:title" content="DK shot production">
+  <!-- описание страницы -->
+  <meta property="og:description" content="Сборные съемки Москва">
+  <!--! ссылка на изображение, которое будет публиковаться в записи -->
+  <!-- <meta property="og:image" content="http://fls.guru/meta/img/bg.jpg"> -->
+  <!--! ссылка на текущую страницу -->
+  <!-- <meta property="og:url" content="http://fls.guru/meta/ "> -->
+  <!-- название сайта -->
+  <meta property="og:site_name" content="DK shot production">
+
   <link rel="icon" href="./src/img/icons/DK.png" type="image/png">
   <link rel="stylesheet" href="./swiper/swiper-bundle.css">
   <link rel="stylesheet" href="./css/removedefault.css">
@@ -18,19 +38,16 @@
     <!-- Start Big block header -->
     <header class="header" id="top">
       <!-- Start burger button block -->
-      <!-- <section class="burger__wrapper"> -->
       <button class="burger_btn">
         <span></span><span></span><span></span>
       </button>
-      <!-- </section> -->
       <!-- End burger button block -->
 
       <!-- Start Inner block header -->
       <div class="header__block">
-        <!-- <section class="header__first"> -->
         <!-- Start logo block in header -->
         <section class="header__block-logo">
-          <a href="#top" class="navLogo">
+          <a class="navLogo">
             <img src="src/img/logo_white1.svg" alt="logo" class="navLogo img-logo">
           </a>
         </section>
@@ -94,25 +111,6 @@
     </header>
     <!-- End Big block header -->
 
-    <!-- Promo anounce -->
-    <!-- <section class="container dark anounce">
-      <section class="inner__container anounce__inner">
-
-        <div class="popup__header">
-          <button class="burger_btn close_announce">
-            <span></span><span></span>
-          </button>
-        </div>
-
-        <div class="announce_text">
-          Оставь заявку и получи скидку на первую съемку!
-        </div>
-
-      </section>
-    </section> -->
-    <!-- End Promo anounce -->
-
-
     <!-- Start hero block -->
     <div class="hero">
       <section class="container">
@@ -128,7 +126,7 @@
             </section>
 
             <section class="hero-buttons">
-              <button target="_blank" class="button-full bigtext promo-btn">
+              <button class="button-full bigtext promo-btn">
                 Оставить заявку
               </button>
               <!-- Arrow down -->
@@ -143,27 +141,31 @@
     </div>
     <!-- End hero block -->
 
-
-    <!-- !!! -->
     <!-- START promo -->
-    <section class="container light">
-      <section class="inner__container">
-        <section class="block_title promo-text">
-          <h1>Заполни заявку и получи скидку на первый заказ</h1>
-        </section>
-    
-        <section class="promoBtn__wrapper">
-          <button class="button-full bigtext promo-btn">Заполнить заявку</button>
-        </section>
-
+    <section class="promo__wrapper inner__container">
+      <div class="inner__promo">
+        <div class="promo__header">
+          <button class="burger_btn close_promo">
+            <span></span><span></span>
+          </button>
+        </div>
+        
+        <section class="promo__content flex-col-20">
+          <section class="block_title promo-text">
+            <h1>Оставь заявку и получи скидку на первый заказ</h1>
+          </section>
+        
+          <section class="promoBtn__wrapper">
+            <button class="button-full bigtext promo-btn" id="btn-banner">Заполнить</button>
+          </section>
+      </div>
       </section>
       <!-- END inner__container -->
-    </section>
+      </section>
     <!-- END promo -->
-    <!-- !!! -->
     
     <!-- START promo-popup block-->
-    <section class="popup container promo-popup">
+    <section class="popup promo-popup">
       <div class="popup__block inner__container dark promoPopup__inner">
         <div class="popup__header promoPopup__header">
           <button class="burger_btn close_popup">
@@ -262,21 +264,6 @@
                 </div>
               </div>
               <!-- END form_column  -->
-
-              <!-- 10. Можете загрузить референсы - позы/настроение/ракурсы -->
-              <!-- <div class="form__item">
-                    <div class="form__label">Можете загрузить референсы - позы/настроение/ракурсы</div>
-                    <div class="file">
-                      <div class="file__item">
-                        <input id="formImage" accept=".jpg, .jpeg, .png, .gif" type="file" name="refs" class="file__input">
-                        <button class="file__button button-full">Выбрать</button>
-                      </div>
-
-                      <div class="file__preview" id="filePreview">
-
-                      </div>
-                    </div>
-                  </div> -->
             </div>
 
             <button type="submit" class="button-full bigtext promo-submit">отправить</button>
@@ -784,6 +771,7 @@
                     <!-- Slides -->
                     <div class="swiper-slide video-slide">
                       <video class="lazy" muted controls playsinline
+                      poster="./src/video/covers/7015.jpg"
                       src="./src/video/walk/compressed/IMG_7015.mp4">
                         <source type="video/mp4"
                         src="./src/video/walk/compressed/IMG_7015.mp4">
@@ -886,34 +874,26 @@
                       <!-- Slides -->
                       <div class="swiper-slide video-slide">
                         <video class="lazy" muted controls playsinline
-                        poster="./src/video/covers/7011.jpg"
-                        src="./src/video/reels/compressed/IMG_7011.mp4">
-                          <source type="video/mp4"
-                          src="./src/video/reels/compressed/IMG_7011.mp4">
+                          poster="./src/video/covers/7011.jpg">
+                          <source type="video/mp4" src="./src/video/reels/compressed/IMG_7011.mp4">
                         </video>
                       </div>
                       <div class="swiper-slide video-slide">
                         <video id="lazyTest" class="lazy" muted controls playsinline
-                        poster="./src/video/covers/7012.jpg"
-                        src="./src/video/reels/compressed/IMG_7012.mp4">
-                        <source type="video/mp4"
-                        src="./src/video/reels/compressed/IMG_7012.mp4">
+                        poster="./src/video/covers/7012.jpg">
+                        <source type="video/mp4" src="./src/video/reels/compressed/IMG_7012.mp4">
                       </video>
                       </div>
                       <div class="swiper-slide video-slide">
                         <video id="lazyTest" class="lazy" muted controls playsinline
-                        poster="./src/video/covers/7013.jpg"
-                          src="./src/video/reels/compressed/IMG_7013.mp4">
-                          <source type="video/mp4"
-                          src="./src/video/reels/compressed/IMG_7013.mp4">
+                          poster="./src/video/covers/7013.jpg">
+                          <source type="video/mp4" src="./src/video/reels/compressed/IMG_7013.mp4">
                         </video>
                       </div>
                       <div class="swiper-slide video-slide">
                         <video id="lazyTest" class="lazy" muted controls playsinline
-                        poster="./src/video/covers/7014.jpg"
-                          src="./src/video/reels/compressed/IMG_7014.mp4">
-                          <source type="video/mp4"
-                          src="./src/video/reels/compressed/IMG_7014.mp4">
+                          poster="./src/video/covers/7014.jpg">
+                          <source type="video/mp4" src="./src/video/reels/compressed/IMG_7014.mp4">
                         </video>
                       </div>
                       
@@ -1330,13 +1310,13 @@
             <section class="polaroid">
               <img src="./src/img/team/dasha.PNG" alt="photographer">
               <p>Даша – фотограф</p>
-              <a href="https://instagram.com/abulidze_daria?igshid=MzRlODBiNWFlZA==" class="button-full">Instagram</a>
+              <a target="_blank" href="https://instagram.com/abulidze_daria?igshid=MzRlODBiNWFlZA==" class="button-full">Instagram</a>
             </section>
 
             <section class="polaroid">
               <img src="./src/img/team/kate.PNG" alt="photographer">
               <p>Катя - продюсер</p>
-              <a href="https://instagram.com/kate_shot_?igshid=MzRlODBiNWFlZA==" class="button-full">Instagram</a>
+              <a target="_blank" href="https://instagram.com/kate_shot_?igshid=MzRlODBiNWFlZA==" class="button-full">Instagram</a>
             </section>
 
             <section class="text">
@@ -1484,7 +1464,7 @@
 
           <section class="contacts-elem">
             Свежая информация о предстоящих съемках - в
-            нашем <a href="https://t.me/dk_shooot">Телеграм-канале</a>
+            нашем <a target="_blank" href="https://t.me/dk_shooot">Телеграм-канале</a>
           </section>
 
           <section class="contacts-elem elem-flex">
