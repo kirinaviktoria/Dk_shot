@@ -120,7 +120,9 @@
 
   /* карточки на 2 колонки */
   .block_cards, .models_block {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
     justify-content: space-between;
     margin: 0 auto;
   }
@@ -738,13 +740,13 @@
 
 @media screen and (max-width: 645px) {
   .hero { 
-    background-image: url('../src/img/hero/hero-main.jpg');
+    background-image: url('../src/hero/hero-main.webp');
   }
 }
 
 @media screen and (min-width: 645px) {
   .hero { 
-    background-image: url('../src/img/hero/hero1.jpg');
+    background-image: url('../src/hero/hero1.webp');
   }
 }
 
@@ -776,12 +778,12 @@
 
 @media screen and (min-width: 880px) {
   .hero { 
-    background-image: url('../src/img/hero/hero-2-1.jpg');
+    background-image: url('../src/hero/hero-2-1.webp');
   }
 }
 
 @media screen and (min-width: 1170px) {
   .hero { 
-    background-image: url('../src/img/hero/hero-3-11.jpg');
+    background-image: url('../src/hero/hero-3-11.webp');
   }
 }
