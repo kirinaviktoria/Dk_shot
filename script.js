@@ -8,13 +8,22 @@ const containers = document.querySelectorAll('.container');
 const myBlur = document.querySelector('.blur');
 const body = document.querySelector('.body');
 const btnTop = document.querySelector('.button-up');
-// const upWrapper = document.querySelector('.up_wrapper');
 const promoBtn = document.querySelector('.promo-btn');
 const btnBanner = document.querySelector('#btn-banner');
 const promoPopup = document.querySelector('.promo-popup');
 const closePopup = document.querySelector('.close_popup');
 const promoWrapper = document.querySelector('.promo__wrapper');
 const closePromo = document.querySelector('.close_promo');
+//form-controls:
+const promoForm = document.querySelector('#promo-form');
+const promoSubmit = document.querySelector('.promo-submit');
+const loader = document.querySelector('.spinner__wrapper');
+const formTitle = document.querySelector('.form__title');
+const formSended = document.querySelector('.form_sended');
+const idApp = document.querySelector('#idApp')
+const closeFormSended = document.querySelector('.close_formSended');
+//end form-controls
+const videoSlide = document.querySelectorAll('.video-slide');
 
 
 window.addEventListener('keydown', e => {
@@ -25,19 +34,12 @@ window.addEventListener('keydown', e => {
   }
 });
 
-//clear anchor
-function deleteAnchor() {
-  let str = document.location.toString();
-  document.location = str.substring(0, str.lenght - str.indexOf('#'));
-}
-
 const toggleMobile = () => {
   headerBlock.classList.toggle('open');
   header.classList.toggle('open');
   body.classList.toggle('scroll-hidden');
   body.classList.toggle('fixed');
   hero.classList.toggle('hero-open');
-  // body.classList.toggle('hero-open')
   myBlur.classList.toggle('hide');
 }
 
@@ -62,7 +64,6 @@ const toggleTablet = () => {
   body.classList.toggle('scroll-hidden');
   body.classList.toggle('fixed');
   hero.classList.toggle('hero-open');
-  // body.classList.toggle('hero-open')
 }
 
 const hideAll = () => {
@@ -70,10 +71,6 @@ const hideAll = () => {
   header.classList.toggle('open');
   body.classList.toggle('scroll-hidden');
   body.classList.toggle('fixed');
-
-  // containers.forEach((item) => {
-  //   item.classList.toggle('hide');
-  // })
 };
 
 if (window.innerWidth <= 745) {
@@ -131,28 +128,21 @@ document.querySelectorAll('.format').forEach(function(formats) {
   formatsBtn.addEventListener('click', () => {
     popup.classList.toggle('visible');
     body.classList.toggle('scroll-hidden');
-    // body.classList.toggle('fixed');
     btnTop.classList.toggle('topHide');
-    // upWrapper.classList.toggle('hide')
   });
 
   closePopup.addEventListener('click', () => {
     stopVideo();
     popup.classList.toggle('visible');
     body.classList.toggle('scroll-hidden');
-    // body.classList.toggle('fixed');
     btnTop.classList.toggle('topHide');
-
-    // upWrapper.classList.toggle('hide')
   });
   
   window.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       popup.classList.remove('visible');
       body.classList.toggle('scroll-hidden');
-      // body.classList.toggle('fixed');
       btnTop.classList.toggle('topHide');
-      // upWrapper.classList.toggle('hide')
     }
   });
 
@@ -167,14 +157,11 @@ document.querySelectorAll('.format').forEach(function(formats) {
     if (e.isClickOutOfPopup) return;
     e.currentTarget.classList.remove('visible');
     body.classList.toggle('scroll-hidden');
-    // body.classList.toggle('fixed');
     btnTop.classList.toggle('topHide');
-    // upWrapper.classList.toggle('hide')
   })
 
   const swiper = new Swiper('.swiperFormats', {
     // Optional parameters
-    // direction: 'horizontal',
     loop: true,
   
     // If we need pagination
@@ -214,15 +201,6 @@ const models_swiper = new Swiper('.modelsSwiper', {
 });
 
 //Обработка формы
-const promoForm = document.querySelector('#promo-form');
-const promoSubmit = document.querySelector('.promo-submit');
-const loader = document.querySelector('.spinner__wrapper');
-const formTitle = document.querySelector('.form__title');
-
-const formSended = document.querySelector('.form_sended');
-const idApp = document.querySelector('#idApp')
-const closeFormSended = document.querySelector('.close_formSended');
-
 //promoPopup open
 btnBanner.addEventListener('click', () => {
   togglePopup();
@@ -243,7 +221,6 @@ closePopup.addEventListener('click', () => {
 promoForm.addEventListener('submit', promoSend)
 
 async function promoSend(e) {
-  // toggleForm();
   e.preventDefault();
   let error = formValidate(promoForm);
 
@@ -254,7 +231,6 @@ async function promoSend(e) {
   }
 
   else {
-    // loader.classList.toggle('hide');
     promoForm.classList.add('_sending');
     // send form
     let response = await fetch('sendmail.php', {
@@ -264,12 +240,9 @@ async function promoSend(e) {
 
     if(response.ok) {
       let result = await response.json();
-      // alert(result.message);
       promoForm.reset();
       promoForm.classList.remove('_sending');
       hideForm();
-      // showSended();
-      // loader.classList.toggle('hide');
       console.log(randID());
     }
     else {
@@ -280,7 +253,6 @@ async function promoSend(e) {
 }
 
 const togglePopup = () => {
-  // showForm();
   promoPopup.classList.toggle('visible');
   body.classList.toggle('scroll-hidden');
   btnTop.classList.toggle('topHide');
@@ -297,19 +269,6 @@ const hideForm = () => {
   promoForm.classList.add('hide');
   formSended.classList.remove('hide');
 }
-
-// const toggleForm = () => {
-//   formTitle.classList.toggle('hide');
-//   promoForm.classList.toggle('hide');
-// }
-
-// const showSended = () => {
-//   formSended.classList.remove('hide');
-// }
-
-// const hideSended = () => {
-//   formSended.classList.add('hide');
-// }
 
 function formValidate(promoForm) {
   let error = 0;
@@ -357,8 +316,6 @@ function emailTest(input){
   return  !/ˆ\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
 
-const videoSlide = document.querySelectorAll('.video-slide');
-
 function playVideo() {
   videoSlide.forEach(slide => {
     if (slide.classList.contains('swiper-slide-active')) {
@@ -396,13 +353,6 @@ const video_swiper = new Swiper('.swiperVideo', {
 });
 
 // Appearing promo banner
-// window.addEventListener('scroll', () => {
-//   let scrollTop = window.scrollY;
-//   let promoVisible = (hero.offsetHeight / 3) * 2;
-
-//   scrollTop >= promoVisible ? promoWrapper.classList.add('visible') : promoWrapper.classList.remove('visible');
-// });
-
 const promoAppear = () => {
   let scrollTop = window.scrollY;
   let promoVisible = hero.offsetHeight;
@@ -429,7 +379,6 @@ window.onscroll = () => {
   if(window.scrollY > 700) {
     btnTop.classList.remove('topHide')
   } 
-  // || popup.classList.сontains('visible')
   else if (window.scrollY < 700) {
     btnTop.classList.add('topHide')
   }
@@ -439,96 +388,3 @@ btnTop.addEventListener('click', () => {
   // Плавная прокрутка до элемента с id = href у ссылки
   document.querySelector('#top').scrollIntoView();
 })
-// Обработка загрузки файлов
-// const formImage = document.querySelector('#formImage');
-// const filePreview = document.querySelector('#filePreview');
-
-// formImage.addEventListener('change', () => {
-//   uploadFile(formImage.files[0]);
-// });
-
-// function uploadFile(file) {
-//   // check type
-//   if(!['image/jpeg', 'image/png', 'image/gif', 'image/jpg'].includes(file.type)) {
-//     alert('Разрешены только изображения');
-//     formImage.value = '';
-//     return;
-//   }
-//   //check size (<2Mb)
-//   if(file.size > 2 * 1024 * 1024) {
-//     alert('Файл должен быть менее 2 МБ');
-//     return;
-//   }
-
-//   let reader = new FileReader();
-//   reader.onload = function(e) {
-//     filePreview.innerHTML = `<img src='${e.target.result}' alt='фото'>`;
-//   };
-//   reader.onerror = function(e) {
-//     alert('Ошибка загрузки');
-//   };
-//   reader.readAsDataURL(file);
-
-// }
-
-
-// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-//   if (window.innerWidth <= 668) {
-//     burgerBtn.addEventListener('touched', () => hideAll())
-  
-//     document.querySelectorAll('.nav').forEach(function (headerLinks) {
-//       const nav = headerLinks.querySelector('#nav-link');
-    
-//       nav.addEventListener('touched', () => hideAll());
-//     });
-//   }
-
-//   if (window.innerWidth > 668 && window.innerWidth <= 995 ) {
-//     burgerBtn.addEventListener('touched', () => {
-//       headerBlock.classList.toggle('open');
-//       header.classList.toggle('open');
-//       body.classList.toggle('scroll-hidden');
-//       hero.classList.toggle('hero-open')
-//       myBlur.classList.toggle('hide')
-//     })
-//   }
-// }
-
-// burgerBtn.addEventListener('click', () => hideAll())
-
-// document.querySelectorAll('.nav').forEach(function (headerLinks) {
-//   const nav = headerLinks.querySelector('#nav-link');
-
-//   nav.addEventListener('click', () => hideAll());
-// });
-
-// document.querySelectorAll('.format-btn').forEach(elem => {
-//   elem.addEventListener('click', () => {
-//     popup.classList.toggle('visible')
-//     console.log('popup!')
-//   });
-// })
-
-
-// document.addEventListener('click', e => console.log(e.target));
-
-// const swiper = new Swiper('.mySwiper', {
-//   // Optional parameters
-//   // direction: 'horizontal',
-//   effect: 'slide',
-//   loop: true,
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-//   mousewhell: true,
-// });
-
