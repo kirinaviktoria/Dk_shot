@@ -17,10 +17,10 @@
 <!--! ссылка на текущую страницу -->
 <meta property=og:site_name content="DK shot production">
 <link rel=icon href=./src/icons/dk-icon.png type=image/png>
-<link rel=stylesheet href=./css/minify.removedef.css>
-<link rel=stylesheet href=./css/minify.css>
-<link rel=stylesheet href=./css/minify.media.css>
-<link rel=stylesheet href=./swiper/swiper-bundle.css>
+<link rel=stylesheet href=/css/removedefault.min.css>
+<link rel=stylesheet href=/css/main.min.css>
+<link rel=stylesheet href=/css/media.min.css>
+<link rel=stylesheet href=/swiper/swiper-bundle.min.css>
 <title>DK shot: сборные съемки Москва</title>
 </head>
 <body class=body>
@@ -561,7 +561,7 @@ Streetstyle – это разновидность имиджевой съемк�
 </div></section>
 </section>
 <section class="card walk format">
-<video id=card_video_cover class=lazyload autoplay muted loop playsinline data-src=/src/formats/video/card-covers/walk-cover.webm>
+<video id=card_video_cover class=lazyload autoplay muted loop playsinline data-src=/src/formats/video/card-covers/walk-cover.mp4>
 </video>
 <section class=card__content>
 <section class=card_text>
@@ -600,19 +600,27 @@ Streetstyle – это разновидность имиджевой съемк�
 <div class="swiper mySwiper swiperVideo" id=swiperVideo>
 <div class=swiper-wrapper>
 <div class="swiper-slide video-slide">
-<video class="lazy lazyload" autoplay muted controls playsinline poster=/src/formats/video/covers/15.webp data-src=/src/formats/video/walk/7015.webm>
+<video class="lazy lazyload" autoplay muted controls playsinline poster=/src/formats/video/covers/15.webp>
+  <source preload=none type=video/webm src=/src/formats/video/walk/7015.webm>
+  <source preload=none type=video/mp4 src=/src/formats/video/walk/7015.mp4>
 </video>
 </div>
 <div class="swiper-slide video-slide">
-<video class="lazy lazyload" muted controls playsinline poster=/src/formats/video/covers/16.webp data-src=/src/formats/video/walk/7016.webm>
+<video class="lazy lazyload" muted controls playsinline poster=/src/formats/video/covers/16.webp>
+  <source preload=none type=video/webm src=/src/formats/video/walk/7016.webm>
+  <source preload=none type=video/mp4 src=/src/formats/video/walk/7016.mp4>
 </video>
 </div>
 <div class="swiper-slide video-slide">
-<video class="lazy lazyload" muted controls playsinline poster=/src/formats/video/covers/17.webp data-src=/src/formats/video/walk/7017.webm>
+<video class="lazy lazyload" muted controls playsinline poster=/src/formats/video/covers/17.webp>
+  <source preload=none type=video/webm src=/src/formats/video/walk/7017.webm>
+  <source preload=none type=video/mp4 src=/src/formats/video/walk/7017.mp4>
 </video>
 </div>
 <div class="swiper-slide video-slide">
-<video class="lazy lazyload" muted controls playsinline poster=/src/formats/video/covers/18.webp data-src=/src/formats/video/walk/7018.webm>
+<video class="lazy lazyload" muted controls playsinline poster=/src/formats/video/covers/18.webp>
+  <source preload=none type=video/webm src=/src/formats/video/walk/7018.webm>
+  <source preload=none type=video/mp4 src=/src/formats/video/walk/7018.mp4>
 </video>
 </div>
 </div>
@@ -626,7 +634,7 @@ Streetstyle – это разновидность имиджевой съемк�
 </div></section>
 </section>
 <section class="card reels format">
-<video id=card_video_cover class=lazyload autoplay muted loop playsinline data-src=/src/formats/video/card-covers/reels-cover.webm>
+<video id=card_video_cover class=lazyload autoplay muted loop playsinline data-src=/src/formats/video/card-covers/reels-cover.mp4>
 </video>
 <section class=card__content>
 <section class=card_text>
@@ -665,23 +673,27 @@ Reels
 <div class="swiper mySwiper swiperVideo" id=swiperVideo>
 <div class=swiper-wrapper>
 <div class="swiper-slide video-slide">
-<video class="lazy lazyload" autoplay muted controls playsinline=true poster=/src/formats/video/covers/11.webp data-src=/src/formats/video/reels/7011.webm>
-<source type=video/webm src=/src/formats/video/reels/7011.webm>
+<video class="lazy lazyload" autoplay muted controls playsinline=true poster=/src/formats/video/covers/11.webp>
+  <source preload=none type=video/webm src=/src/formats/video/reels/7011.webm>
+  <source preload=none type=video/mp4 src=/src/formats/video/reels/7011.mp4>
 </video>
 </div>
 <div class="swiper-slide video-slide">
-<video class="lazy lazyload" muted controls playsinline=true poster=/src/formats/video/covers/12.webp data-src=/src/formats/video/reels/7012.webm>
-<source type=video/mp4 src=/src/formats/video/reels/7012.webm>
+<video class="lazy lazyload" muted controls playsinline=true poster=/src/formats/video/covers/12.webp>
+  <source preload=none type=video/webm src=/src/formats/video/reels/7012.webm>
+  <source preload=none type=video/mp4 src=/src/formats/video/reels/7012.mp4>
 </video>
 </div>
 <div class="swiper-slide video-slide">
-<video class="lazy lazyload" muted controls playsinline=true poster=/src/formats/video/covers/13.webp data-src=/src/formats/video/reels/7013.webm>
-<source type=video/mp4 src=/src/formats/video/reels/7013.webm>
+<video class="lazy lazyload" muted controls playsinline=true poster=/src/formats/video/covers/13.webp>
+  <source preload=none type=video/webm src=/src/formats/video/reels/7013.webm>
+  <source preload=none type=video/mp4 src=/src/formats/video/reels/7013.mp4>
 </video>
 </div>
 <div class="swiper-slide video-slide">
-<video class="lazy lazyload" muted controls playsinline=true poster=/src/formats/video/covers/14.webp data-src=/src/formats/video/reels/7014.webm>
-<source type=video/mp4 src=/src/formats/video/reels/7014.webm>
+<video class="lazy lazyload" muted controls playsinline=true poster=/src/formats/video/covers/14.webp>
+  <source preload=none type=video/webm src=/src/formats/video/reels/7014.webm>
+  <source preload=none type=video/mp4 src=/src/formats/video/reels/7014.mp4>
 </video>
 </div>
 </div>
@@ -1131,7 +1143,7 @@ STREETSTYLE
 </section>
 </main>
 <script src=lazysizes.min.js async></script>
-<script defer src=./swiper/swiper-bundle.min.js></script>
+<script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script defer src=min.script.js></script>
 </body>
 </html>

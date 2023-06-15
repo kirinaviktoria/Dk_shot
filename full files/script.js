@@ -243,7 +243,6 @@ async function promoSend(e) {
       promoForm.reset();
       promoForm.classList.remove('_sending');
       hideForm();
-      console.log(randID());
     }
     else {
       alert('Ошибка отправки, повторите попытку позже');
