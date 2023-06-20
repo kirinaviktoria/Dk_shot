@@ -365,6 +365,85 @@ header {
   background-color: var(--dark-gray);
 }
 
+/* START Promo announse */
+.promo__wrapper {
+  background-color: #e9ccda;
+  width: auto;
+  padding: 10px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.promo__wrapper.visible {
+  opacity: 0.9;
+}
+
+.promo__wrapper .inner__container {
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.promo__content {
+  margin-top: -10px;
+  gap: 10px;
+}
+
+.promo__content h1{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 20px 0 20px;
+  color: var(--dark-gray);
+}
+
+.promo__content .promo-btn {
+  font-size: 16px;
+  padding: 5px;
+  min-width: 150px;
+  max-width: 250px;
+  width: 100%;
+}
+
+.inner__promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.promo__header {
+  display: flex;
+  width: fit-content;
+  align-self: flex-end;
+  height: fit-content;
+}
+
+.promo__content {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.close_promo {
+  display: block;
+  justify-content: flex-end;
+  height: 20px;
+  width: 20px;
+}
+
+.close_promo span {
+  width: 15px;
+  height: 1px;
+  top: 10px;
+  background-color: var(--dark-gray);
+}
+/* END Promo announse */
+
 .hero {
   background-image: url('../src/hero/hero1.webp');
   background-position: center;
@@ -598,76 +677,6 @@ header {
   font-size: 19px;
 }
 
-/* START Promo announse */
-.promo__wrapper {
-  background-color: #e9ccda;
-  width: auto;
-  padding: 10px;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 3;
-}
-
-.promo__wrapper.visible {
-  opacity: 0.9;
-}
-
-.promo__wrapper .inner__container {
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.promo__content h1{
-  font-size: 24px;
-  font-weight: 400;
-  color: var(--dark-gray);
-}
-
-.promo__content .promo-btn {
-  font-size: 20px;
-  padding: 10px;
-  min-width: 150px;
-  width: 100%;
-}
-
-.inner__promo {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.promo__header {
-  display: flex;
-  width: fit-content;
-  align-self: flex-end;
-  height: fit-content;
-}
-
-.promo__content {
-  width: 100%;
-  justify-content: space-between;
-}
-
-.close_promo {
-  display: block;
-  justify-content: flex-end;
-  height: 30px;
-  width: 30px;
-}
-
-.close_promo span {
-  width: 20px;
-  top: 10px;
-  background-color: var(--dark-gray);
-}
-/* END Promo announse */
-
 /* START POPUP */
 .popup {
   position: fixed;
@@ -734,11 +743,12 @@ header {
 .popup_content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
   background-color: var(--dark-gray);
-  max-height: 100vh;
+  max-height: 90vh;
   height: 100%;
-  gap: 15px;
+  gap: 10px;
   font-weight: 300;
   box-sizing: content-box;
 }

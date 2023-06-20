@@ -37,7 +37,7 @@
 
 @media screen and (max-width: 500px) { 
   .popup_content {
-    padding: 0 10px !important;
+    padding: 0 10px 20px 10px !important;
   }
 
   .popup_content .block_title h1 {
@@ -445,7 +445,8 @@
 
 @media screen and (max-width: 425px) and (max-height: 860px){
   .swiperFormats {
-    max-width: 365px;
+    /* !! */
+    max-width: 330px;
   }
 
   .swiperFormats .swiper-slide img {
