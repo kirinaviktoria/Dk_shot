@@ -315,16 +315,30 @@ function emailTest(input){
   return  !/ˆ\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
 
+//Переключение видео слайдов
 function playVideo() {
-  videoSlide.forEach(slide => {
-    if (slide.classList.contains('swiper-slide-active')) {
-      slide.children[0].play();
+  document.querySelectorAll('.video-card').forEach(function(videoCard) {
+    const popupVideo = videoCard.querySelector('.popup');
+    const videoSlide = videoCard.querySelectorAll('.video-slide');
+
+    if (popupVideo.classList.contains('visible')) {
+      videoSlide.forEach(slide => {
+        if (slide.classList.contains('swiper-slide-active')) {
+          slide.children[0].play();
+        }
+        else {
+          slide.children[0].pause();
+          slide.children[0].currentTime = 0;
+        }
+      });
     }
-    else if (!slide.classList.contains('swiper-slide-active')){
-      slide.children[0].pause();
-      slide.children[0].currentTime = 0;
+    else {
+      videoSlide.forEach(slide => {
+        slide.children[0].pause();
+        slide.children[0].currentTime = 0;
+      })
     }
-  });
+  })
 }
 
 function stopVideo() {
