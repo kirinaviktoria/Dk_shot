@@ -1483,7 +1483,7 @@ textarea.form-control {
   position: relative;
   position: fixed;
   right: 20px;
-  bottom: 10px;
+  bottom: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1492,9 +1492,23 @@ textarea.form-control {
   z-index: 5;
 }
 
+.up_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .button-up svg {
   width: 30px;
   height: 30px;
+}
+
+.amo-button-holder{
+  bottom:20px !important;
+}
+
+.amo90{
+  bottom:90px
 }
 
 .topHide {

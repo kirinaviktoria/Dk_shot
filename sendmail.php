@@ -10,6 +10,11 @@
   $mail->CharSet = "UTF-8"; /* Задаем кодировку UTF-8 */
   $mail->IsHTML(true); /* Разрешаем работу с HTML */
  
+  
+  $date_today = date("d.m.y"); //присвоено 12.03.15
+  $today[1] = date("H:i:s"); //присвоит 1 элементу массива 18:32:17
+  // echo("Текущее время: $today[1] и дата: $date_today .");
+  $dateTime = "$date_today $today[1]";
 
   // from:
   $mail->setFrom('info@dkshot.ru', 'DK shot');
@@ -18,13 +23,8 @@
   $mail->addBCC('info@dkshot.ru');
   $mail->addBCC('kirinaviktoria@yandex.ru');
 
-  // theme mail
-  $mail->Subject = 'Заявка с сайта DK shot';
-
-  $date_today = date("d.m.y"); //присвоено 12.03.15
-  $today[1] = date("H:i:s"); //присвоит 1 элементу массива 18:32:17
-  // echo("Текущее время: $today[1] и дата: $date_today .");
-  $dateTime = "$date_today $today[1]";
+ // theme mail
+  $mail->Subject = "Заявка с сайта DK shot от $dateTime";
 
   // $dateTime = date('l jS \of F Y h:i:s A');
 
